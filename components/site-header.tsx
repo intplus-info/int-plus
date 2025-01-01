@@ -22,7 +22,7 @@ export function SiteHeader() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4">
+    <header className="absolute top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex md:min-h-[82px] items-center">
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
@@ -44,7 +44,7 @@ export function SiteHeader() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex ml-auto items-center space-x-4">
+        <nav className="hidden lg:flex ml-auto items-center space-x-4">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -66,7 +66,7 @@ export function SiteHeader() {
 
         {/* Mobile Navigation */}
         <Sheet>
-          <SheetTrigger asChild className="md:hidden ml-auto">
+          <SheetTrigger asChild className="lg:hidden ml-auto">
             <Button variant="ghost" size="icon" className="size-8">
               <Menu className="size-5" />
               <span className="sr-only">Toggle navigation menu</span>

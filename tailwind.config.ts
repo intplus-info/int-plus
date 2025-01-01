@@ -9,6 +9,10 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			container: {
+				center: true,
+				padding: "2rem",
+			},
 			boxShadow: {
 				glowing: '0px 0px 105px 45px rgba(45,255,196,0.9)',
 				glowingWhite: '0px 0px 18px 5px rgba(255,255,255,0.86)',

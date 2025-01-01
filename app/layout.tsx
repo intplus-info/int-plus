@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={cn(
-        "min-h-screen font-sans antialiased bg-black",
+        "min-h-screen font-sans antialiased bg-background",
         inter.className
       )}>
         <SiteHeader />
