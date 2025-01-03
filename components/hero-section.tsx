@@ -30,8 +30,9 @@ export function HeroSection() {
   // }, [emblaApi])
 
   return (
-    <section className="lg:min-h-[70vh] xl:min-h-screen flex items-center justify-center py-10 md:py-20">
-      <div className="flex flex-col items-center text-center space-y-8 w-full pt-20">
+    <section className="lg:min-h-[70vh] xl:min-h-screen flex items-center justify-center py-10 bg-background md:py-20 bg-[url('/bg-newer.svg')]">
+      <div className="bg-gradient-to-br from-background/50 via-background to-background h-full w-full absolute top-0 left-0 z-0" />
+      <div className="flex flex-col items-center text-center space-y-8 w-full pt-20 z-20">
         <div className="space-y-4 w-full container px-4">
           <h1 className="text-[34px] md:text-5xl font-semibold leading-[44px] xl:tracking-tighter">
             Software Solutions{" "} <br className="xl:hidden" />
