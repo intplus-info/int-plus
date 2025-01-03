@@ -89,7 +89,7 @@ export function ServicesSection() {
             <span className="text-white">Services</span>
           </h2>
           <p className="mx-auto max-w-[700px] text-muted-foreground">
-            We build scalable, robust solutions designed to evolve with your business. Let's craft software your customers will love
+            We build scalable, robust solutions designed to evolve with your business. Let&apos;s craft software your customers will love
             and drive your company forward.
           </p>
         </div>

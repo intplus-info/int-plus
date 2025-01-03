@@ -56,7 +56,7 @@ export function ReasonsSection() {
           </p>
           <p className="mx-auto text-muted-foreground  md:text-lg max-w-2xl xl:max-w-full">
             At Int+, we combine technical expertise with a deep understanding of your business needs to deliver <br className="hidden xl:block" />
-            software solutions that make a real difference. Here's why you should choose us:
+            software solutions that make a real difference. Here&apos;s why you should choose us:
           </p>
         </div>
         <div className="mx-auto grid mt-16 md:grid-cols-2 lg:gap-y-10 lg:grid-cols-3 items-start relative">

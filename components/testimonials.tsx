@@ -156,7 +156,7 @@ export default function Testimonials() {
           <span className="text-white">Testimonials</span>
         </h2>
         <p className="text-muted-foreground max-w-3xl mx-auto">
-          Don't just take our word for it; hear what our satisfied clients have to say about their experience with DigitX. We take pride in building lasting relationships and delivering exceptional results.
+          Don&apos;t just take our word for it; hear what our satisfied clients have to say about their experience with DigitX. We take pride in building lasting relationships and delivering exceptional results.
         </p>
       </div>
 

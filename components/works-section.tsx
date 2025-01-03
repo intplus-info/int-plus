@@ -34,7 +34,7 @@ export function WorksSection() {
             <span className="text-white">Works</span>
           </h2>
           <p className="mx-auto max-w-[800px] text-muted-foreground">
-            Witness the brilliance of our previous projects. Our portfolio showcases the successful collaborations we've had with
+            Witness the brilliance of our previous projects. Our portfolio showcases the successful collaborations we&apos;ve had with
             diverse clients across various industries. Let our work speak for itself.
           </p>
         </div>
