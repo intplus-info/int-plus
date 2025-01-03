@@ -39,7 +39,7 @@ export function HeroSection() {
             <span className="text-muted-foreground">For Your Business Growth</span>
           </h1>
           <p className="mx-auto text-muted-foreground pt-8 leading-[21px] max-w-[800px] xl:max-w-full">
-            Your trusted partner for cutting-edge software solutions. Whether you're a startup looking to launch your MVP or an enterprise <br className="hidden xl:block" /> seeking to optimize your operations, our team of expert developers, designers, and consultants guides you every step of the way.
+            Your trusted partner for cutting-edge software solutions. Whether you&apos;re a startup looking to launch your MVP or an enterprise <br className="hidden xl:block" /> seeking to optimize your operations, our team of expert developers, designers, and consultants guides you every step of the way.
           </p>
         </div>
         <div className="w-full">

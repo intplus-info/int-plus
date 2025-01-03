@@ -9,7 +9,7 @@ export default function CTABanner() {
             Ready to Improve Your Business Productive?
           </h2>
           <p className="text-muted-foreground mb-8 mx-auto">
-            Take the first step towards digital success with Int+ by your side. Our team of experts is eager to craft tailored solutions that drive growth for your business. Whether you need a stunning website, a powerful mobile app, or a robust enterprise solution, we've got you covered. Let's embark on this transformative journey together.
+            Take the first step towards digital success with Int+ by your side. Our team of experts is eager to craft tailored solutions that drive growth for your business. Whether you need a stunning website, a powerful mobile app, or a robust enterprise solution, we&apos;ve got you covered. Let&apos;s embark on this transformative journey together.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center pt-8">
             <Button className="w-fit" size="lg" >
