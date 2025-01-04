@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Input } from "@/components/ui/input"
+import { motion } from "framer-motion"
 
 interface FAQItem {
   question: string
@@ -60,7 +61,13 @@ export default function FAQ() {
   return (
     <div className="w-full min-h-screen bg-background text-white px-4 py-16">
       <div className="max-w-6xl mx-auto space-y-12">
-        <div className="text-center space-y-4">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          className="text-center space-y-4"
+        >
           <h2 className="title">
             <span className="text-muted-foreground">Frequently</span> Asked Questions
           </h2>
@@ -68,9 +75,15 @@ export default function FAQ() {
             Got questions? We&apos;ve got answers. Check out our frequently asked questions section to find valuable insights into our
             processes, pricing, and more. Transparency is at the core of our client interactions.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="relative max-w-md mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+          className="relative max-w-md mx-auto"
+        >
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2  h-4 w-4" />
           <Input
             type="text"
@@ -79,7 +92,7 @@ export default function FAQ() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
           {filteredFAQs.map((faq, index) => (

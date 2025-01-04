@@ -1,10 +1,19 @@
 import { Inter } from 'next/font/google'
+import type { Metadata } from 'next'
 import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import "./globals.css"
 import Footer from '@/components/footer'
 
 const inter = Inter({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+  title: "Int+",
+  description: "Software Solutions For Your Business Growth",
+  icons: {
+    icon: "/icons/logo.svg",
+  }
+}
 
 export default function RootLayout({
   children,

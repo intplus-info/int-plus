@@ -1,9 +1,9 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight } from 'lucide-react'
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 const projects = [
   {
@@ -28,7 +28,13 @@ export function WorksSection() {
   return (
     <section className="w-full bg-background py-16 md:py-24">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+        <motion.div
+          className="flex flex-col items-center justify-center space-y-4 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        >
           <h2 className="title">
             <span className="text-muted-foreground">Our</span>{" "}
             <span className="text-white">Works</span>
@@ -37,16 +43,19 @@ export function WorksSection() {
             Witness the brilliance of our previous projects. Our portfolio showcases the successful collaborations we&apos;ve had with
             diverse clients across various industries. Let our work speak for itself.
           </p>
-        </div>
+        </motion.div>
 
         <div className="mx-auto grid gap-8 mt-16 lg:grid-cols-2 items-start">
           {projects.map((project) => (
-            <Card
+            <motion.div
               key={project.title}
               className="bg-gradient-to-b from-[#1A1A1A] via-[#1A1A1A]/60 to-background  border-none  shadow-none group"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
             >
-              <CardContent className="p-4 md:p-8 relative">
-                {/* <div className=" bg-gradient-to-b from-background/10 via-background to-background h-full w-full absolute top-0 left-0 z-0" /> */}
+              <div className="p-4 md:p-8 relative">
                 <div className="relative w-full bg-[#1A1A1A] rounded-[17px]  bg-[url('/bg-small.svg')]">
                   <Image
                     src={project.image}
@@ -74,8 +83,8 @@ export function WorksSection() {
                   </div>
                   <p className="text-muted-foreground">{project.description}</p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </motion.div>
           ))}
         </div>
 

@@ -78,5 +78,5 @@ body {
 }
 
 .title {
-  @apply text-[28px] md:text-[38px] font-semibold leading-[38px] text-center tracking-wide;
+  @apply text-[28px] md:text-[38px] xl:text-[46px] font-semibold leading-[38px] text-center tracking-wide;
 }

@@ -1,8 +1,24 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Code2, Smartphone, Globe, Building2, Users2, Workflow, LayoutGrid, GitBranch, Palette, Database, MonitorSmartphone, Binary, ArrowRight } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Code2,
+  Smartphone,
+  Globe,
+  Building2,
+  Users2,
+  Workflow,
+  LayoutGrid,
+  GitBranch,
+  Palette,
+  Database,
+  MonitorSmartphone,
+  Binary,
+  ArrowRight,
+} from "lucide-react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion"; // Import the hook to detect visibility
 
 const services = [
   {
@@ -77,31 +93,41 @@ const services = [
     description:
       "Streamline your development and deployment processes with our DevOps and cloud expertise.",
   },
-]
+];
 
 export function ServicesSection() {
   return (
     <section className="w-full bg-background py-16 md:py-24">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+        <motion.div
+          className="flex flex-col items-center justify-center space-y-4 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        >
           <h2 className="title">
-            <span className="text-zinc-500">Our</span>{" "}
+            <span className="text-muted-foreground">Our</span>{" "}
             <span className="text-white">Services</span>
           </h2>
           <p className="mx-auto max-w-[700px] text-muted-foreground">
             We build scalable, robust solutions designed to evolve with your business. Let&apos;s craft software your customers will love
             and drive your company forward.
           </p>
-        </div>
+        </motion.div>
         <div className="mx-auto max-w-6xl grid gap-8 mt-16 md:grid-cols-2 items-start">
           {services.map((service) => (
-            <Card
+            <motion.div
               key={service.title}
-              className="relative h-fit sm:h-[400px] fflex items-center justify-center overflow-hidden group border-t border-b-0 bg-gradient-to-b from-background to-background dark:from-background dark:to-background rounded-[calc(1.5rem-1px)] p-px"
+              className="relative h-fit sm:h-[400px] flex items-center justify-center overflow-hidden group border border-b-0 bg-gradient-to-b from-background to-background dark:from-background dark:to-background rounded-[calc(1.5rem-1px)] p-px"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
               <div className="h-full bg-background rounded-[calc(1.5rem-1px)] bg-[url('/bg-small.svg')]">
                 <div className=" bg-gradient-to-b from-background/10 via-background to-background h-full w-full absolute top-0 left-0 z-0" />
-                <CardContent className="flex flex-col items-center justify-center space-y-4 py-10 px-14 text-center h-full relative z-10">
+                <div className="flex flex-col items-center justify-center space-y-4 py-10 px-14 text-center h-full relative z-10">
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-zinc-900 to-black rounded-full animate-pulse group-hover:animate-none" />
                     <div className="relative z-10 rounded-full border border-zinc-800 p-4">
@@ -118,15 +144,16 @@ export function ServicesSection() {
                     className="text-zinc-400 hover:text-white hover:bg-zinc-900"
                   >
                     Learn More
-                    <span className="ml-2"><ArrowRight /></span>
+                    <span className="ml-2">
+                      <ArrowRight />
+                    </span>
                   </Button>
-                </CardContent>
+                </div>
               </div>
-            </Card>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
-

@@ -1,105 +1,10 @@
 'use client'
 
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
-import { Twitter } from 'lucide-react'
 import Autoplay from "embla-carousel-autoplay"
 import { useRef } from "react"
 import { InfiniteMovingCards } from "./ui/nfinite-moving-cards"
+import { motion } from "framer-motion"
 
-interface Testimonial {
-  content: string
-  author: {
-    name: string
-    position: string
-    company: string
-    image: string
-  }
-}
-
-// const testimonials: Testimonial[] = [
-//   {
-//     content: "Working with DigitX was a pleasure. Their web design team created a stunning website that perfectly captured our brand's essence. The feedback from our customers has been overwhelmingly positive.",
-//     author: {
-//       name: "Bidemi Olaiya",
-//       position: "Managing Partner",
-//       company: "KoddFarms",
-//       image: "/placeholder.svg?height=48&width=48"
-//     }
-//   },
-//   {
-//     content: "The mobile app Int+ developed for us exceeded our expectations. Its user-friendly interface and seamless functionality have earned us rave reviews from our users.",
-//     author: {
-//       name: "Ogaga Kane",
-//       position: "CEO",
-//       company: "Airpocket",
-//       image: "/placeholder.svg?height=48&width=48"
-//     }
-//   },
-//   {
-//     content: "Int+ transformed our outdated website into a modern, responsive platform. Their attention to detail and ability to understand our needs made the entire process smooth and hassle-free.",
-//     author: {
-//       name: "Kayode Alayi",
-//       position: "CEO",
-//       company: "Xperience Solutions",
-//       image: "/placeholder.svg?height=48&width=48"
-//     }
-//   },
-//   {
-//     content: "Working with DigitX was a pleasure. Their web design team created a stunning website that perfectly captured our brand's essence. The feedback from our customers has been overwhelmingly positive.",
-//     author: {
-//       name: "Bidemi Olaiya",
-//       position: "Managing Partner",
-//       company: "KoddFarms",
-//       image: "/placeholder.svg?height=48&width=48"
-//     }
-//   },
-//   {
-//     content: "The mobile app Int+ developed for us exceeded our expectations. Its user-friendly interface and seamless functionality have earned us rave reviews from our users.",
-//     author: {
-//       name: "Ogaga Kane",
-//       position: "CEO",
-//       company: "Airpocket",
-//       image: "/placeholder.svg?height=48&width=48"
-//     }
-//   },
-//   {
-//     content: "Int+ transformed our outdated website into a modern, responsive platform. Their attention to detail and ability to understand our needs made the entire process smooth and hassle-free.",
-//     author: {
-//       name: "Kayode Alayi",
-//       position: "CEO",
-//       company: "Xperience Solutions",
-//       image: "/placeholder.svg?height=48&width=48"
-//     }
-//   },
-//   {
-//     content: "Working with DigitX was a pleasure. Their web design team created a stunning website that perfectly captured our brand's essence. The feedback from our customers has been overwhelmingly positive.",
-//     author: {
-//       name: "Bidemi Olaiya",
-//       position: "Managing Partner",
-//       company: "KoddFarms",
-//       image: "/placeholder.svg?height=48&width=48"
-//     }
-//   },
-//   {
-//     content: "The mobile app Int+ developed for us exceeded our expectations. Its user-friendly interface and seamless functionality have earned us rave reviews from our users.",
-//     author: {
-//       name: "Ogaga Kane",
-//       position: "CEO",
-//       company: "Airpocket",
-//       image: "/placeholder.svg?height=48&width=48"
-//     }
-//   },
-//   {
-//     content: "Int+ transformed our outdated website into a modern, responsive platform. Their attention to detail and ability to understand our needs made the entire process smooth and hassle-free.",
-//     author: {
-//       name: "Kayode Alayi",
-//       position: "CEO",
-//       company: "Xperience Solutions",
-//       image: "/placeholder.svg?height=48&width=48"
-//     }
-//   }
-
-// ]
 
 const testimonials = [
   {
@@ -144,13 +49,16 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const plugin = useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: false })
-  )
 
   return (
     <section className="bg-background py-20 px-4">
-      <div className=" mx-auto text-center mb-16">
+      <motion.div
+        className=" mx-auto text-center mb-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+      >
         <h2 className="title mb-4">
           <span className="text-muted-foreground">Our</span>{" "}
           <span className="text-white">Testimonials</span>
@@ -158,7 +66,7 @@ export default function Testimonials() {
         <p className="text-muted-foreground max-w-3xl mx-auto">
           Don&apos;t just take our word for it; hear what our satisfied clients have to say about their experience with DigitX. We take pride in building lasting relationships and delivering exceptional results.
         </p>
-      </div>
+      </motion.div>
 
       <div className="flex items-center justify-center">
         <InfiniteMovingCards
