@@ -2,42 +2,42 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Users, Sparkles, LayoutGrid, Lightbulb, Users2, Target, ArrowRight } from "lucide-react";
+import { Users, Sparkles, LayoutGrid, Lightbulb, Users2, Target, ArrowRight, icons } from "lucide-react";
 import Image from "next/image";
 
 const reasons = [
   {
-    icon: Users,
+    icon: '/icons/team.svg',
     title: "Dedicated Project Teams",
     description:
       "We provide dedicated teams of expert developers who work exclusively on your project, ensuring efficient and timely delivery.",
   },
   {
-    icon: Sparkles,
+    icon: '/icons/agile.svg',
     title: "Agile Methodology",
     description:
       "We use Agile methodologies to ensure flexibility, transparency, and continuous improvement throughout the development process.",
   },
   {
-    icon: LayoutGrid,
+    icon: '/icons/solutions.svg',
     title: "Tailored Business Solutions",
     description:
       "We have a proven track record of delivering successful software solutions across various industries.",
   },
   {
-    icon: Lightbulb,
+    icon: '/icons/innovation.svg',
     title: "Innovations",
     description:
       "We leverage the latest technologies and methodologies to create cutting-edge applications that meet your specific needs.",
   },
   {
-    icon: Users2,
+    icon: '/icons/collaboration.svg',
     title: "Collaborations",
     description:
       "We believe working closely with you helps to understand your vision and goals, ensuring that our solution perfectly aligns with your business objectives.",
   },
   {
-    icon: Target,
+    icon: '/icons/quality.svg',
     title: "Quality",
     description:
       "We are committed to delivering high-quality software that is reliable, scalable, and secure.",
@@ -92,8 +92,8 @@ export function ReasonsSection() {
               className="h-[390px] border-b last:border-b-0 md:border-b-0 md:border-r md:[&:nth-child(3)]:border-r-0 md:[&:nth-child(5)]:border-r-0 lg:[&:nth-child(3)]:border-r lg:[&:nth-child(4)]:border-r-0 lg:[&:nth-child(5)]:border-r lg:[&:nth-child(7)]:border-0"
             >
               <div className="flex flex-col items-center space-y-4 justify-between p-6 text-center h-full">
-                <div className="rounded-full border-8 p-4">
-                  <Image src="/icons/team.svg" width={36} height={36} alt={reason.title} />
+                <div className="rounded-full border-8 relative size-20 flex items-center justify-center bg-[url('/bg-tiny.svg')]">
+                  <Image src={reason.icon} width={32} height={32} alt={reason.title} />
                 </div>
                 <h3 className="text-xl font-bold text-white">{reason.title}</h3>
                 <p className="text-muted-foreground">{reason.description}</p>

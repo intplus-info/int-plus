@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Code2,
   Smartphone,
@@ -18,7 +17,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion"; // Import the hook to detect visibility
 
 const services = [
   {
@@ -126,7 +124,7 @@ export function ServicesSection() {
               viewport={{ once: true }}
             >
               <div className="h-full bg-background rounded-[calc(1.5rem-1px)] bg-[url('/bg-small.svg')]">
-                <div className=" bg-gradient-to-b from-background/10 via-background to-background h-full w-full absolute top-0 left-0 z-0" />
+                <div className=" bg-gradient-to-b from-background/10 via-background/70 to-background h-full w-full absolute top-0 left-0 z-0" />
                 <div className="flex flex-col items-center justify-center space-y-4 py-10 px-14 text-center h-full relative z-10">
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-zinc-900 to-black rounded-full animate-pulse group-hover:animate-none" />
@@ -134,8 +132,8 @@ export function ServicesSection() {
                       <service.icon className="h-6 w-6 text-white" />
                     </div>
                     <div className="absolute inset-0 border border-zinc-800 rounded-full animate-ping opacity-20" />
-                    <div className="absolute inset-[-4px] border border-zinc-800 rounded-full" />
-                    <div className="absolute inset-[-8px] border border-zinc-800 rounded-full" />
+                    <div className="absolute inset-[-10px] border border-zinc-800 rounded-full" />
+                    <div className="absolute inset-[-18px] border border-zinc-800 rounded-full" />
                   </div>
                   <h3 className="text-xl font-bold text-white">{service.title}</h3>
                   <p className="text-zinc-400">{service.description}</p>

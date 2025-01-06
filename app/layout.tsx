@@ -27,7 +27,9 @@ export default function RootLayout({
         inter.className
       )}>
         <SiteHeader />
-        {children}
+        <div className='min-h-screen'>
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

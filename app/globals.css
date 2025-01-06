@@ -52,7 +52,7 @@ body {
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
-    --muted-foreground: 0 0% 40%;
+    --muted-foreground: 0 0% 55%;
     --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
@@ -78,5 +78,5 @@ body {
 }
 
 .title {
-  @apply text-[28px] md:text-[38px] xl:text-[46px] font-semibold leading-[38px] text-center tracking-wide;
+  @apply text-[28px] md:text-[38px] font-semibold leading-[38px] text-center tracking-wide;
 }

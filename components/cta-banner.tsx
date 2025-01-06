@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 
 export default function CTABanner() {
   return (
-    <section className="bg-background text-white py-16 px-4 rounded-t-[15px] min-h-[600px] md:min-h-[500px] bg-[url('/bg-small.svg')] relative border-t flex items-center justify-center">
+    <section className="bg-background text-white py-16 px-4 rounded-t-[25px] min-h-[600px] md:min-h-[500px] bg-[url('/bg-small.svg')] relative border-t flex items-center justify-center">
       <div className=" mx-auto text-center flex items-center justify-center w-full absolute z-20 pt-10">
         <div className="container mx-auto">
           <h2 className="title mb-6">

@@ -9,7 +9,7 @@ import { WorksSection } from "@/components/works-section"
 export default function Home() {
   return (
     <main>
-      <div className="max-h-screen overflow-hidden">
+      <div className="xl:max-h-screen overflow-hidden">
         <HeroSection />
       </div>
       <ReasonsSection />
