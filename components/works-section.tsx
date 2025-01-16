@@ -49,7 +49,7 @@ export function WorksSection() {
           {projects.map((project) => (
             <motion.div
               key={project.title}
-              className="bg-gradient-to-b from-[#1A1A1A] via-[#1A1A1A]/60 to-background  border-none  shadow-none group"
+              className="bg-gradient-to-b from-[#1A1A1A] via-[#1A1A1A]/60 to-background rounded-3xl border-none  shadow-none group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}

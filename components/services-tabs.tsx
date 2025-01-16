@@ -208,7 +208,7 @@ export default function ServicesTabs() {
         </h2>
       </motion.div>
       <Tabs defaultValue="web-design" className="w-full flex flex-col md:flex-row gap-x-10" onValueChange={handleTabChange}>
-        <div className="md:w-full max-w-[300px] md:sticky md:top-4 md:self-start">
+        <div className="md:w-full max-w-[300px] md:sticky md:top-28 md:self-start">
           <TabsList className="grid grid-cols-1 gap-2 bg-transparent p-0 w-full h-fit">
             {services.map((service) => (
               <TabsTrigger
