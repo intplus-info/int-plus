@@ -23,9 +23,9 @@ export default function ProjectShowcaseCard({
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
-    <div className="min-h-screen container max-w-6xl border rounded-lg px-4 py-4 md:p-8">
+    <div className="min-h-screen container max-w-6xl border rounded-2xl px-4 py-4 md:p-8">
       {/* Hero Section with 3D Mockups */}
-      <div className="relative h-[480px] mb-8 rounded-lg overflow-hidden">
+      <div className="relative h-[480px] mb-8 rounded-2xl overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src={img}
@@ -72,7 +72,7 @@ export default function ProjectShowcaseCard({
           </div>
 
 
-          <div className="border rounded-lg p-4 md:p-8">
+          <div className="border rounded-2xl p-4 md:p-8">
             {/* Project Description */}
             <div className="">
               <h2 className="text-lg font-medium mb-2">Project Description</h2>
@@ -84,7 +84,7 @@ export default function ProjectShowcaseCard({
             >
 
               {/* Project Metadata */}
-              <div className="grid md:grid-cols-4 gap-6 my-8 border rounded-lg p-4">
+              <div className="grid md:grid-cols-4 gap-6 my-8 border rounded-2xl p-4">
                 <div>
                   <h3 className="text-sm text-muted-foreground mb-1">Category</h3>
                   <p className="text-sm">{projectCategories[0]}</p>
@@ -104,7 +104,7 @@ export default function ProjectShowcaseCard({
               </div>
 
               {/* Technologies Used */}
-              <div className="mb-8 border rounded-lg gap-10 p-4 flex flex-col md:flex-row md:items-center">
+              <div className="mb-8 border rounded-2xl gap-10 p-4 flex flex-col md:flex-row md:items-center">
                 <h2 className="text-lg font-medium">Technologies Used</h2>
                 <div className="flex flex-wrap gap-4">
                   {technologies.map((tech, i) => (
@@ -119,9 +119,9 @@ export default function ProjectShowcaseCard({
               </div>
 
               {/* Methods Used */}
-              <div className="border rounded-lg p-4">
+              <div className="border rounded-2xl p-4">
                 <h2 className="text-lg font-medium mb-4">Methods Used</h2>
-                <div className="flex flex-wrap gap-4 md:border rounded-lg md:p-8">
+                <div className="flex flex-wrap gap-4 md:border rounded-2xl md:p-8">
                   {methods.map((method, index) => (
                     <div className="flex md:items-center gap-2" key={index}>
                       <Badge

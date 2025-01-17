@@ -1,20 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { ArrowRight, Code2, Smartphone } from "lucide-react";
+import { ArrowRight, Briefcase, BriefcaseBusiness, Phone, } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
 const services = [
   {
-    icon: Code2,
+    icon: Briefcase,
     title: "Careers At Int+",
     description:
       "At Int+, we believe in fostering a dynamic and collaborative work environment that empowers our team members to excel in their respective fields. Join us to be part of a passionate and innovative team dedicated to crafting exceptional digital solutions for clients across the globe. We are committed to nurturing talent, encouraging professional growth, and creating a workplace where creativity thrives.",
     link: "/careers",
   },
   {
-    icon: Smartphone,
+    icon: Phone,
     title: "Contact Us",
     description:
       "At Int+, we value your inquiries, feedback, and collaborations. Whether you are interested in our technological services, have questions about our projects, or want to explore potential partnerships, we encourage you to reach out to our dedicated team. Connect with us through any of the channels below, and we'll be delighted to assist you on your technological journey.",
@@ -155,7 +155,7 @@ const TeamMembers = () => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-zinc-900 to-black rounded-full animate-pulse group-hover:animate-none" />
                   <div className="relative z-10 rounded-full border border-zinc-800 p-4">
-                    <service.icon className="h-6 w-6 text-white" />
+                    <service.icon fill="white" stroke="black" className="h-6 w-6 text-white" />
                   </div>
                   <div className="absolute inset-0 border border-zinc-800 rounded-full animate-ping opacity-20" />
                   <div className="absolute inset-[-10px] border border-zinc-800 rounded-full" />

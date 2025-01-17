@@ -67,7 +67,7 @@ export default function UpcomingProjects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`rounded-lg p-6  transition-colors border
+              className={`rounded-2xl p-6  transition-colors border
                   ${index === 1 || index === 3 ? 'bg-gradient-to-bl from-gray-800/20 via-background to-background'
                   :
                   'bg-gradient-to-br from-gray-800/20 via-background to-background'}
@@ -80,7 +80,7 @@ export default function UpcomingProjects() {
                 <h3 className="text-lg font-medium">{project.title}</h3>
               </div>
 
-              <div className=" grid grid-cols-2 text-sm text-muted-foreground border border-muted-foreground/20 rounded-lg mb-4 p-2">
+              <div className=" grid grid-cols-2 text-sm text-muted-foreground border border-muted-foreground/20 rounded-2xl mb-4 p-2">
                 <div className='p-4 border-r border-muted-foreground/20'>
                   <div className="mb-1">Category</div>
                   <div className='text-white'>{project.category}</div>
@@ -93,7 +93,7 @@ export default function UpcomingProjects() {
                 </div>
               </div>
 
-              <div className="text-sm text-muted-foreground border border-muted-foreground/20 rounded-lg p-4">
+              <div className="text-sm text-muted-foreground border border-muted-foreground/20 rounded-2xl p-4">
                 <div className="text-[0.65rem] uppercase mb-1">
                   Project Description
                 </div>
