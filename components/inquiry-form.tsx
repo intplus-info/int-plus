@@ -44,7 +44,7 @@ export default function InquiryForm() {
         <div className="text-center space-y-2">
           <h1 className="text-2xl font-medium">Online Inquiry Form</h1>
           <p className="text-muted-foreground text-sm">
-            Please fill in the following details, and we'll get back to you within 24 hours.
+            Please fill in the following details, and we&apos;ll get back to you within 24 hours.
           </p>
         </div>
 
