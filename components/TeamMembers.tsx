@@ -76,7 +76,7 @@ const teamMembers = [
 const TeamMembers = () => {
   return (
     <section className="py-16 container">
-      <motion.div
+      {/* <motion.div
         className="mx-auto text-center mb-16"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ const TeamMembers = () => {
             </div>
           </motion.div>
         ))}
-      </div>
+      </div> */}
 
 
 
