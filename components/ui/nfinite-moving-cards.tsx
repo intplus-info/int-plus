@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import { Twitter, Facebook, Instagram, Linkedin } from "lucide-react";
 import { Button } from "./button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import Image from "next/image";
 
 
 
@@ -20,7 +21,6 @@ export const InfiniteMovingCards = ({
     quote: string;
     name: string;
     title: string;
-    social: string;
     image: string;
   }[];
   direction?: "left" | "right";
@@ -78,15 +78,6 @@ export const InfiniteMovingCards = ({
     }
   };
 
-  const socialIcons = {
-    twitter: <Twitter fill="white" className="w-[22px] h-[22px]" />,
-    facebook: <Facebook fill="white" className="w-[22px] h-[22px]" />,
-    instagram: <Instagram fill="white" className="w-[22px] h-[22px]" />,
-    linkedin: <Linkedin fill="white" className="w-[22px] h-[22px]" />,
-  };
-  const getSocialIcon = (social: string) => {
-    return socialIcons[social as keyof typeof socialIcons];
-  };
   return (
     <div
       ref={containerRef}
@@ -106,36 +97,28 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             className="w-[300px] h-fit max-w-full relative rounded-[15px] md:w-[450px]"
-            // style={{
-            //   background:
-            //     "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
-            // }}
+
             key={item.name}
           >
             <blockquote>
-              {/* <div
-                aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-              ></div> */}
               <div className="flex flex-col md:h-[220px] rounded-[15px] gap-2 bg-gradient-to-b from-[#1A1A1A]/30 via-[#1A1A1A] to-black/40 border border-[#262626] px-8 py-6">
 
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="size-[44px] bg-[#262626] border"
-                >
-                  {getSocialIcon(item.social)}
-                </Button>
+                <Image
+                  src='/icons/logo-color.svg'
+                  width={32}
+                  height={32}
+                  alt="int+"
+                />
                 <span className=" relative z-20 text-sm leading-[1.6] text-gray-100 font-normal mt-4">
                   {item.quote}
                 </span>
               </div>
 
               <div className="relative z-20 mt-6 flex flex-row items-center gap-2">
-                <Avatar className="h-12 w-12">
+                {/* <Avatar className="h-12 w-12">
                   <AvatarImage src="https://github.com/shadcn.png" />
                   <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
+                </Avatar> */}
 
                 <span className="flex flex-col">
                   <span className=" text-base leading-[1.6] text-white font-normal">

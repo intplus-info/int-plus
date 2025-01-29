@@ -89,7 +89,7 @@ export function ReasonsSection() {
                 visible: { opacity: 1 },
               }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
-              className="h-[390px] border-b last:border-b-0 md:border-b-0 md:border-r md:[&:nth-child(3)]:border-r-0 md:[&:nth-child(5)]:border-r-0 lg:[&:nth-child(3)]:border-r lg:[&:nth-child(4)]:border-r-0 lg:[&:nth-child(5)]:border-r lg:[&:nth-child(7)]:border-0"
+              className="h-[330px] border-b last:border-b-0 md:border-b-0 md:border-r md:[&:nth-child(3)]:border-r-0 md:[&:nth-child(5)]:border-r-0 lg:[&:nth-child(3)]:border-r lg:[&:nth-child(4)]:border-r-0 lg:[&:nth-child(5)]:border-r lg:[&:nth-child(7)]:border-0"
             >
               <div className="flex flex-col items-center space-y-4 justify-between p-6 text-center h-full">
                 <div className="rounded-full border-8 relative size-20 flex items-center justify-center bg-[url('/bg-tiny.svg')]">
@@ -97,12 +97,12 @@ export function ReasonsSection() {
                 </div>
                 <h3 className="text-xl font-bold text-white">{reason.title}</h3>
                 <p className="text-muted-foreground">{reason.description}</p>
-                <Button variant="outline" className="h-[68px] w-[203px] group">
+                {/* <Button variant="outline" className="h-[68px] w-[203px] group">
                   Learn More
                   <span className="ml-2 flex items-center justify-center p-4 w-[54px] h-[38px] rounded-full bg-[#1A1A1A] group-hover:translate-x-[8px] transition-all duration-300 ease-in-out">
                     <ArrowRight size={12} strokeWidth={2} />
                   </span>
-                </Button>
+                </Button> */}
               </div>
             </motion.div>
           ))}

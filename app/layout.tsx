@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header"
 import "./globals.css"
 import Footer from '@/components/footer'
 import { footerData } from '@/data'
+import { Toaster } from '@/components/ui/toaster'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -32,6 +33,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer {...footerData} />
+        <Toaster />
       </body>
     </html>
   )

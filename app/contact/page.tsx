@@ -15,8 +15,12 @@ const locations = [
   {
     image: '/icons/nigeria.svg',
     country: "Nigeria",
-    address:
-      "80 Sparklight Estate, Ojodu, Lagos 116 Adenike Wole- Ajibode, Lekki Phase one",
+    address: (
+      <ul>
+        <li>80 Sparklight Estate, Ojodu, Lagos.</li>
+        <li>116 Adenike Wole- Ajibode, Lekki Phase One.</li>
+      </ul>
+    )
   },
   {
     image: '/icons/canada.svg',
@@ -183,7 +187,7 @@ const Page = () => {
                       className="rounded-full"
                     />
                     <h3 className="text-xl font-bold text-white">{location.country}</h3>
-                    <p className="text-zinc-400">{location.address}</p>
+                    <div className="text-zinc-400">{location.address}</div>
                   </div>
                 </div>
               </motion.div>

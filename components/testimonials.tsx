@@ -9,7 +9,6 @@ const testimonials = [
       "We were incredibly impressed with's ability to deliver our project on time and within budget. They were meticulous in their planning and execution, and they kept us informed every step of the way. The final product exceeded our expectations, and we're already seeing a positive impact on our business.",
     name: "CEO",
     title: "Cashbridge MFB",
-    social: "twitter",
     image: '/images/user.jpg'
   },
   {
@@ -17,7 +16,6 @@ const testimonials = [
       " has a deep understanding of. Their team was able to translate our complex requirements into a user-friendly and efficient software solution. Their expertise was invaluable in helping us achieve our goals.",
     name: "Business Manager",
     title: "Storefront",
-    social: "twitter",
     image: '/images/user.jpg'
   },
   {
@@ -25,7 +23,6 @@ const testimonials = [
       "Working with was a true partnership. They were always available to answer our questions, provide updates, and incorporate our feedback. Their communication and collaboration skills were exceptional, and we felt like we were part of the team.",
     name: "Project Manager",
     title: "KoddFarms",
-    social: "twitter",
     image: '/images/user.jpg'
   },
   {
@@ -33,7 +30,6 @@ const testimonials = [
       "We faced several unexpected challenges during our project but were able to find creative solutions to every obstacle. Their problem-solving abilities and dedication to our success were truly impressive.",
     name: "CEO",
     title: "Paystride",
-    social: "twitter",
     image: '/images/user.jpg'
   },
 ];

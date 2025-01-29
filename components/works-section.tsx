@@ -61,8 +61,8 @@ export function WorksSection() {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={300}
-                    height={300}
+                    width={220}
+                    height={220}
                     className="opacity-15 rounded-[17px]"
                   />
                   <div className="absolute -bottom-5 w-full flex items-center justify-center">

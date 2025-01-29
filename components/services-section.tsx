@@ -17,6 +17,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const services = [
   {
@@ -139,12 +140,15 @@ export function ServicesSection() {
                   <p className="text-zinc-400">{service.description}</p>
                   <Button
                     variant="outline"
+                    asChild
                     className="text-zinc-400 hover:text-white hover:bg-zinc-900"
                   >
-                    Learn More
-                    <span className="ml-2">
-                      <ArrowRight />
-                    </span>
+                    <Link href='/services'>
+                      Learn More
+                      <span className="ml-2">
+                        <ArrowRight />
+                      </span>
+                    </Link>
                   </Button>
                 </div>
               </div>

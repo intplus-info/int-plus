@@ -9,7 +9,6 @@ const page = () => {
   return (
     <div className=''>
       <TeamMembers />
-      <FAQ />
       <CTABanner />
     </div>
   )

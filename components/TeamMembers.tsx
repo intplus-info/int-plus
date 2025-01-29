@@ -76,7 +76,7 @@ const teamMembers = [
 const TeamMembers = () => {
   return (
     <section className="py-16 container">
-      {/* <motion.div
+      <motion.div
         className="mx-auto text-center mb-16"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ const TeamMembers = () => {
         </p>
       </motion.div>
 
-      <div className="mx-auto grid gap-4 mt-16 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4  items-start">
+      {/* <div className="mx-auto grid gap-4 mt-16 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4  items-start">
         {teamMembers.map((member) => (
           <motion.div
             key={member.id}
@@ -135,9 +135,9 @@ const TeamMembers = () => {
 
 
 
-      <div className="mt-20 text-center text-lg font-semibold">
+      {/* <div className="mt-20 text-center text-lg font-semibold">
         See These Pages
-      </div>
+      </div> */}
 
       <div className="mx-auto grid gap-8 mt-8 xl:grid-cols-2 items-start">
         {services.map((service) => (
