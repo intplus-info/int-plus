@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Int+",
   description: "Software Solutions For Your Business Growth",
   icons: {
-    icon: "/icons/logo-color.svg",
+    icon: "/icons/logo-favicon.svg",
   }
 }
 
