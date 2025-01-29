@@ -68,19 +68,19 @@ export default function ContactConfirmation() {
           </p>
 
           <div className="flex justify-center gap-6 py-4">
-            <Link href="#" className="hover:text-gray-300 transition-colors">
+            <Link href="https://www.linkedin.com/company/intplus" className="hover:text-gray-300 transition-colors">
               <motion.div whileHover={{ scale: 1.1 }}>
                 <Linkedin className="w-6 h-6" />
               </motion.div>
               <span className="sr-only">LinkedIn</span>
             </Link>
-            <Link href="#" className="hover:text-gray-300 transition-colors">
+            <Link href="https://www.instagram.com/intplus_technology" className="hover:text-gray-300 transition-colors">
               <motion.div whileHover={{ scale: 1.1 }}>
                 <Instagram className="w-6 h-6" />
               </motion.div>
               <span className="sr-only">Instagram</span>
             </Link>
-            <Link href="#" className="hover:text-gray-300 transition-colors">
+            <Link href="https://x.com/info_intplus" className="hover:text-gray-300 transition-colors">
               <motion.div whileHover={{ scale: 1.1 }}>
                 <Twitter className="w-6 h-6" />
               </motion.div>

@@ -16,45 +16,43 @@ const locations = [
     image: '/icons/nigeria.svg',
     country: "Nigeria",
     address:
-      "123 Main Street, Suite 456, New York, NY 10001",
-    link: "/careers",
+      "80 Sparklight Estate, Ojodu, Lagos 116 Adenike Wole- Ajibode, Lekki Phase one",
   },
   {
     image: '/icons/canada.svg',
     country: "Canada",
     address:
-      "789 Tech Avenue, 10th Floor, San Francisco, CA 94105",
-    link: "/contact",
+      "20 Maud St #202 Toronto",
   },
 ]
 
 const emailContacts = [
   {
     title: 'For General Inquiries',
-    email: 'info@intplus.com',
+    email: 'info@intplus.co',
   },
   {
     title: 'For Business Collaborations',
-    email: 'partnerships@intplus.com',
+    email: 'partnerships@intplus.co',
   },
   {
     title: 'For Job Opportunities',
-    email: 'careers@intplus.com',
+    email: 'careers@intplus.co',
   },
 ]
 
 const phoneContacts = [
   {
     title: 'General Enquiries',
-    phone: '+1-XXX-XXX-XXXX',
+    phone: '+234 812 341 1180',
   },
   {
     title: 'Business Collaborations',
-    phone: '+1-XXX-XXX-XXXX',
+    phone: '+234 812 341 1180',
   },
   {
     title: 'Free Consultation',
-    phone: '+1-XXX-XXX-XXXX',
+    phone: '+234 703 957 4358',
   },
 ]
 
@@ -186,14 +184,6 @@ const Page = () => {
                     />
                     <h3 className="text-xl font-bold text-white">{location.country}</h3>
                     <p className="text-zinc-400">{location.address}</p>
-                    <Button variant="outline" className="h-[56px] w-[191px] group">
-                      <Link href={location.link} className="flex gap-4 w-full items-center">
-                        Get Direction
-                        <span className="ml-2 flex items-center justify-center p-4 w-[54px] h-[38px] rounded-full bg-[#1A1A1A] group-hover:translate-x-[8px] transition-all duration-300 ease-in-out">
-                          <ArrowRight size={12} strokeWidth={2} />
-                        </span>
-                      </Link>
-                    </Button>
                   </div>
                 </div>
               </motion.div>

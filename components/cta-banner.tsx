@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "./ui/button";
 
 export default function CTABanner() {
@@ -12,11 +13,15 @@ export default function CTABanner() {
             Take the first step towards digital success with Int+ by your side. Our team of experts is eager to craft tailored solutions that drive growth for your business. Whether you need a stunning website, a powerful mobile app, or a robust enterprise solution, we&apos;ve got you covered. Let&apos;s embark on this transformative journey together.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center pt-8">
-            <Button className="w-fit" size="lg" >
-              Book Free Consultation
+            <Button asChild className="w-fit" size="lg" >
+              <Link href='/contact/#inquiryForm'>
+                Book Free Consultation
+              </Link>
             </Button>
-            <Button className="w-fit" size="lg" variant="outline">
-              View Portfolio
+            <Button asChild className="w-fit" size="lg" variant="outline">
+              <Link href='/projects/#showcase'>
+                View Portfolio
+              </Link>
             </Button>
           </div>
         </div>

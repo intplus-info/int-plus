@@ -19,6 +19,7 @@ export function SiteHeader() {
     { href: "/contact", label: "Contact Us" },
     { href: "/careers", label: "Careers" },
     { href: "/blogs", label: "Blog" },
+    { href: "/academy", label: "Academy" },
   ];
 
   return (
@@ -28,10 +29,10 @@ export function SiteHeader() {
         <div className="flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2 relative">
             <Image
-              src="/icons/logo.svg"
+              src="/icons/logo-color.svg"
               alt="Logo"
-              width={40}
-              height={40}
+              width={60}
+              height={60}
               className=""
             />
             <span className="absolute mx-auto py-4 flex border w-fit bg-gradient-to-r blur-xl from-foreground via-foreground to-foreground bg-clip-text text-[24px] box-content font-extrabold text-transparent text-center select-none">

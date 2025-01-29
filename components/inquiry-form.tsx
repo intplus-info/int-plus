@@ -39,7 +39,7 @@ export default function InquiryForm() {
   }
 
   return (
-    <div className="bg-background px-8 md:px-0 py-12">
+    <div id='inquiryForm' className="bg-background px-8 md:px-0 py-12 scroll-mt-14">
       <div className="mx-auto space-y-8">
         <div className="text-center space-y-2">
           <h1 className="text-2xl font-medium">Online Inquiry Form</h1>

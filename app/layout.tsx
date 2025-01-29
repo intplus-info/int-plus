@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import "./globals.css"
 import Footer from '@/components/footer'
+import { footerData } from '@/data'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "Int+",
   description: "Software Solutions For Your Business Growth",
   icons: {
-    icon: "/icons/logo.svg",
+    icon: "/icons/logo-color.svg",
   }
 }
 
@@ -27,10 +28,10 @@ export default function RootLayout({
         inter.className
       )}>
         <SiteHeader />
-        <div className='min-h-screen'>
+        <div className='min-h-screen scroll-smooth'>
           {children}
         </div>
-        <Footer />
+        <Footer {...footerData} />
       </body>
     </html>
   )

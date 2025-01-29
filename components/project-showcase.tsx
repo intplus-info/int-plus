@@ -7,7 +7,7 @@ import { projects } from '@/lib/projectData'
 
 const ProjectShowcase = () => {
   return (
-    <section className="bg-background py-20 px-4">
+    <section id='showcase' className="bg-background py-20 px-4 scroll-mt-10">
       <motion.div
         className="mx-auto text-center mb-16"
         initial={{ opacity: 0, y: 30 }}

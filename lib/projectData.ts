@@ -34,23 +34,23 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Innovative Digital Retail Platform",
-    img: "/images/project-001.png",
+    img: "/images/project-002.png",
     categories: ["E-commerce", "Web Design & Development", "SaaS"],
-    description: "A dynamic e-commerce platform that revolutionized online shopping for fashion enthusiasts. The website showcases the latest trends, offers personalized recommendations, and seamless checkout options.",
-    timeTaken: "4 Months",
-    startDate: "January 15, 2023",
-    completionDate: "May 15, 2023",
+    description: "We built a groundbreaking e-commerce platform for our client, that seamlessly changes the digital selling narrative worldwide. With an intuitive user interface and secure payment gateways, this project revolutionizes online shopping.",
+    timeTaken: "3 Months",
+    startDate: "January 2022",
+    completionDate: "April 2022",
     methods: ["Agile Development", "User Testing", "A/B Testing"],
     technologies: ["React", "Node.js", "MongoDB", "AWS"]
   },
   {
-    title: "Sustainable Energy Dashboard",
+    title: " Enhanced Logistics Solutions for Small and Medium DIspatch Businesses",
     img: "/images/project-001.png",
     categories: ["Energy", "Dashboard", "Web App"],
-    description: "An analytics dashboard to track renewable energy usage across multiple regions. Includes real-time data visualization and forecasting tools.",
+    description: "Our client came to us with an idea to disrupt dispatch/courier services with technology in Nigeria. With a map and secure payment gateway, building 4 intuitive user interface apps.",
     timeTaken: "3 Months",
-    startDate: "February 1, 2023",
-    completionDate: "April 30, 2023",
+    startDate: "March 2022",
+    completionDate: "June 2022",
     methods: ["Data Visualization", "User Research"],
     technologies: ["Vue.js", "D3.js", "Python", "PostgreSQL"]
   },

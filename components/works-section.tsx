@@ -4,23 +4,24 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from 'lucide-react'
 import Image from "next/image"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 const projects = [
   {
-    image: "/images/project-1.jpg",
+    image: "/project-1.svg",
     title: "Innovative Digital Retail Platform",
     category: "SaaS Web Development",
     date: "January 2022",
     description:
-      "Witness our groundbreaking e-commerce platform that seamlessly change the digital selling narrative worldwide. With an intuitive user interface and secure payment gateways, this project revolutionizes online shopping.",
+      "We built a groundbreaking e-commerce platform for our client, that seamlessly changes the digital selling narrative worldwide. With an intuitive user interface and secure payment gateways, this project revolutionizes online shopping.",
   },
   {
-    image: "/images/project-1.jpg",
-    title: "Enhanced Logistics Solution",
-    category: "Progressive Web App Development",
+    image: "/project-2.svg",
+    title: "Enhanced Logistics Solutions for Small and Medium DIspatch Businesses",
+    category: "SaaS Web Development",
     date: "March 2022",
     description:
-      "Our fitness app helps users stay fit and motivated with personalized workout plans and progress tracking. Its user-friendly design and comprehensive features make staying healthy an enjoyable experience.",
+      "Our client came to us with an idea to disrupt dispatch/courier services with technology in Nigeria. With a map and secure payment gateway, building 4 intuitive user interface apps.",
   },
 ]
 
@@ -56,27 +57,32 @@ export function WorksSection() {
               viewport={{ once: true }}
             >
               <div className="p-4 md:p-8 relative">
-                <div className="relative w-full bg-[#1A1A1A] rounded-[17px]  bg-[url('/bg-small.svg')]">
+                <div className="relative  bg-[#1A1A1A] rounded-[17px]  bg-[url('/bg-small.svg')] w-full h-[400px] flex items-center justify-center">
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={600}
-                    height={600}
-                    className="opacity-20 rounded-[17px]"
+                    width={300}
+                    height={300}
+                    className="opacity-15 rounded-[17px]"
                   />
                   <div className="absolute -bottom-5 w-full flex items-center justify-center">
                     <Button
                       variant="outline"
                       size={"lg"}
+                      asChild
                       className="mx-auto"
                     >
-                      View Projects Details
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <Link href='/projects/showcase'>
+                        View Projects Details
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
                     </Button>
                   </div>
                 </div>
                 <div className="mt-10 space-y-4">
-                  <h3 className="text-lg md:text-xl font-bold text-white">{project.title}</h3>
+                  <span className="h-[300px] w-full bg-red-400">
+                    <h3 className="text-lg md:text-xl font-bold text-white min-h-[70px]">{project.title}</h3>
+                  </span>
                   <div className="flex flex-col md:flex-row text-white md:items-center md:justify-between text-sm">
                     <p className="text-white">Category: {project.category}</p>
                     <p>{project.date}</p>

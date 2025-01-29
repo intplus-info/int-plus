@@ -13,7 +13,7 @@ const projects: Project[] = [
   {
     icon: <CircleDot className="w-6 h-6" />,
     title: "Healthcare Platform Enhancement",
-    category: "Web Development",
+    category: "Health",
     completion: "Q3 2023",
     description:
       "Our team is collaborating with a leading healthcare provider to enhance their existing platform. The project aims to bring user-centric design solutions while ensuring compliance with industry standards. Our work involves detailed study along with innovative platform level modifications to ensure the platform's capabilities and revolutionize healthcare accessibility for users.",
@@ -29,7 +29,7 @@ const projects: Project[] = [
   {
     icon: <GraduationCap className="w-6 h-6" />,
     title: "Educational Learning App",
-    category: "E-commerce",
+    category: "Education",
     completion: "Q4 2024",
     description:
       "We are collaborating with an eco-conscious startup to create an innovative e-commerce platform that promotes sustainable products and environmentally friendly practices. The platform will incorporate features to raise awareness about eco-conscious choices while supporting sustainable businesses. This project aligns with our commitment to developing solutions that will shape the future.",
@@ -56,7 +56,7 @@ export default function UpcomingProjects() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
         >
           <h2 className="title">
-            Upcoming <span className="text-muted-foreground">Projects</span>
+            Ongoing <span className="text-muted-foreground">Projects</span>
           </h2>
           <p className="mx-auto text-muted-foreground md:text-lg max-w-2xl xl:max-w-4xl">
             At our core, we are continuously working on exciting new ventures to push the boundaries of digital innovation and deliver exceptional solutions to our clients. While we are thrilled to share our upcoming projects with you, we understand the importance of confidentiality and safeguarding sensitive information. Therefore, we will provide a brief overview of the upcoming projects while keeping crucial details confidential.
@@ -81,23 +81,10 @@ export default function UpcomingProjects() {
               </div>
 
               <div className=" grid grid-cols-2 text-sm text-muted-foreground border border-muted-foreground/20 rounded-2xl mb-4 p-2">
-                <div className='p-4 border-r border-muted-foreground/20'>
+                <div className='p-4  border-muted-foreground/20'>
                   <div className="mb-1">Category</div>
                   <div className='text-white'>{project.category}</div>
                 </div>
-                <div className='p-4'>
-                  <div className="mb-1">
-                    Expected Completion
-                  </div>
-                  <div className='text-white'>{project.completion}</div>
-                </div>
-              </div>
-
-              <div className="text-sm text-muted-foreground border border-muted-foreground/20 rounded-2xl p-4">
-                <div className="text-[0.65rem] uppercase mb-1">
-                  Project Description
-                </div>
-                <p>{project.description}</p>
               </div>
             </div>
           ))}
