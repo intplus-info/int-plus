@@ -41,7 +41,7 @@ const testimonials = [
 export default function Testimonials() {
 
   return (
-    <section className="bg-background py-20 px-4">
+    <section id="testimonials" className="bg-background py-20 px-4 scroll-mt-10">
       <motion.div
         className=" mx-auto text-center mb-16"
         initial={{ opacity: 0, y: 30 }}

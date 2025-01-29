@@ -47,7 +47,7 @@ export function WorksSection() {
         </motion.div>
 
         <div className="mx-auto grid gap-8 mt-16 lg:grid-cols-2 items-start">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <motion.div
               key={project.title}
               className="bg-gradient-to-b from-[#1A1A1A] via-[#1A1A1A]/60 to-background rounded-3xl border-none  shadow-none group"
@@ -72,7 +72,7 @@ export function WorksSection() {
                       asChild
                       className="mx-auto"
                     >
-                      <Link href='/projects/showcase'>
+                      <Link href={index === 0 ? "projects/#project-1" : "projects/#project-2"}>
                         View Projects Details
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
@@ -98,9 +98,12 @@ export function WorksSection() {
           <Button
             variant="outline"
             size="lg"
+            asChild
           >
-            View All Projects
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <Link href='/projects/#showcase'>
+              View All Projects
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
           </Button>
         </div>
       </div>

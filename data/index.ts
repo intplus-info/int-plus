@@ -25,7 +25,7 @@ export const footerData = {
       title: 'Home',
       links: [
         { title: 'Benefits', href: '#' },
-        { title: 'Our Testimonials', href: '#' },
+        { title: 'Our Testimonials', href: '/#testimonials' },
       ],
     },
     {
@@ -44,22 +44,22 @@ export const footerData = {
     {
       title: 'About Us',
       links: [
-        { title: 'Our Team', href: '#' },
-        { title: 'Achievements', href: '#' },
+        { title: 'Our Team', href: '/about' },
+        { title: 'Achievements', href: '/about' },
       ],
     },
     {
       title: 'Careers',
       links: [
-        { title: 'Job Openings', href: '#' },
-        { title: 'Benefits & Perks', href: '#' },
-        { title: 'Employee Referral', href: '#' },
+        { title: 'Job Openings', href: '/careers' },
+        { title: 'Benefits & Perks', href: '/careers' },
+        { title: 'Employee Referral', href: '/careers' },
       ],
     },
     {
       title: 'Blogs',
       links: [
-        { title: 'Our Blogs', href: '#' },
+        { title: 'Our Blogs', href: 'blog' },
       ],
     },
   ],

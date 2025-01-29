@@ -26,7 +26,9 @@ const ProjectShowcase = () => {
 
       <div className='flex flex-col gap-10'>
         {projects.map((project, index) => (
-          <ProjectShowcaseCard key={index} {...project} />
+          <div key={index} id={index === 0 ? 'project-1' : 'project-2'} className=''>
+            <ProjectShowcaseCard {...project} />
+          </div>
         ))}
       </div>
     </section>

@@ -30,7 +30,7 @@ export default function FAQ() {
       ),
     },
     {
-      question: "What digital marketing strategies do you employ to drive website traffic?z",
+      question: "What digital marketing strategies do you employ to drive website traffic?",
       answer: "We employ a comprehensive approach including SEO, content marketing, social media optimization, and targeted advertising to drive quality traffic to your website."
     },
     {
