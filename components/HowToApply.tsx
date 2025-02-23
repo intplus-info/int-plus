@@ -71,11 +71,11 @@ export default function HowToApply() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="border rounded-xl"
             >
-              <div className='grid border-b grid-cols-2'>
-                <span className='bg-black/40'>
-                  <p className=' p-6 text-xl font-semibold border-r'>Step{step.number}</p>
+              <div className="grid border-b grid-cols-2">
+                <span className="bg-black/40">
+                  <p className=" p-6 text-xl font-semibold border-r">Step{step.number}</p>
                 </span>
-                <span className='bg-gradient-to-r from-[#292929]' />
+                <span className="bg-gradient-to-r from-[#292929]" />
               </div>
 
               <div className="mt-6 p-6">
@@ -89,12 +89,7 @@ export default function HowToApply() {
 
         <div className="mt-16 border p-12 rounded-xl">
           <div className="inline-flex items-center gap-4 text-xl font-semibold">
-            <Image
-              src='/star.svg'
-              alt='star'
-              width={60}
-              height={60}
-            />
+            <Image src="/star.svg" alt="star" width={60} height={60} />
             We value your interest in Int+
           </div>
           <p className="mt-4 text-muted-foreground max-w-5xl">

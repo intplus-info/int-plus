@@ -18,7 +18,7 @@ export function SiteHeader() {
     { href: '/about', label: 'About Us' },
     { href: '/contact', label: 'Contact Us' },
     { href: '/careers', label: 'Careers' },
-    // { href: "/blogs", label: "Blog" },
+    { href: '/blog', label: 'Blog' },
     // { href: "/academy", label: "Academy" },
   ];
 

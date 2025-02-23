@@ -49,7 +49,7 @@ const ContactBanner = () => {
           >
             <Button
               variant={'outline'}
-              className="w-fit hidden xl:block absolute -bottom-[70px] right-1/3 border-foreground/40 text-foreground disabled:text-foreground"
+              className="w-fit hidden xl:block absolute -bottom-[80px] right-1/3 border-foreground/40 text-foreground disabled:text-foreground"
               size="lg"
               disabled
             >

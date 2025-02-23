@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const CareerHero = () => {
   return (
-    <section className="relative flex items-center bg-gradient-to-b from-background to-black justify-center w-full h-[95vh] py-16 md:py-24">
+    <section className="relative flex items-center bg-gradient-to-b from-background to-black justify-center w-full md:h-[60vh] xl:h-[95vh] py-16 md:py-24">
       {/* Title Section */}
       <motion.div
         className="relative z-30 flex flex-col items-center justify-center max-w-4xl space-y-4 text-center"
@@ -18,7 +18,7 @@ const CareerHero = () => {
             in the <br /> Technological Age
           </span>
         </h2>
-        <p className="max-w-5xl mx-auto text-muted-foreground ">
+        <p className="max-w-5xl mx-auto text-muted-foreground px-10">
           At Int+, we believe in fostering a dynamic and collaborative work environment that
           empowers our team members to excel in their respective fields. Join us to be part of a
           passionate and innovative team dedicated to crafting exceptional digital solutions for
@@ -28,7 +28,7 @@ const CareerHero = () => {
       </motion.div>
 
       {/* Background Overlay */}
-      <div className="absolute top-0 w-[700px] h-[95vh] bg-[url('/bg-small.svg')] z-10" />
+      <div className="absolute top-0 w-[700px] md:h-[60vh] xl:h-[95vh] bg-[url('/bg-small.svg')] z-10" />
     </section>
   );
 };
