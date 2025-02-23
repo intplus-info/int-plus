@@ -1,46 +1,55 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { Users, Sparkles, LayoutGrid, Lightbulb, Users2, Target, ArrowRight, icons } from "lucide-react";
-import Image from "next/image";
+import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
+import {
+  Users,
+  Sparkles,
+  LayoutGrid,
+  Lightbulb,
+  Users2,
+  Target,
+  ArrowRight,
+  icons,
+} from 'lucide-react';
+import Image from 'next/image';
 
 const reasons = [
   {
     icon: '/icons/team.svg',
-    title: "Dedicated Project Teams",
+    title: 'Dedicated Project Teams',
     description:
-      "We provide dedicated teams of expert developers who work exclusively on your project, ensuring efficient and timely delivery.",
+      'We provide dedicated teams of expert developers who work exclusively on your project, ensuring efficient and timely delivery.',
   },
   {
     icon: '/icons/agile.svg',
-    title: "Agile Methodology",
+    title: 'Agile Methodology',
     description:
-      "We use Agile methodologies to ensure flexibility, transparency, and continuous improvement throughout the development process.",
+      'We use Agile methodologies to ensure flexibility, transparency, and continuous improvement throughout the development process.',
   },
   {
     icon: '/icons/solutions.svg',
-    title: "Tailored Business Solutions",
+    title: 'Tailored Business Solutions',
     description:
-      "We have a proven track record of delivering successful software solutions across various industries.",
+      'We have a proven track record of delivering successful software solutions across various industries.',
   },
   {
     icon: '/icons/innovation.svg',
-    title: "Innovations",
+    title: 'Innovations',
     description:
-      "We leverage the latest technologies and methodologies to create cutting-edge applications that meet your specific needs.",
+      'We leverage the latest technologies and methodologies to create cutting-edge applications that meet your specific needs.',
   },
   {
     icon: '/icons/collaboration.svg',
-    title: "Collaborations",
+    title: 'Collaborations',
     description:
-      "We believe working closely with you helps to understand your vision and goals, ensuring that our solution perfectly aligns with your business objectives.",
+      'We believe working closely with you helps to understand your vision and goals, ensuring that our solution perfectly aligns with your business objectives.',
   },
   {
     icon: '/icons/quality.svg',
-    title: "Quality",
+    title: 'Quality',
     description:
-      "We are committed to delivering high-quality software that is reliable, scalable, and secure.",
+      'We are committed to delivering high-quality software that is reliable, scalable, and secure.',
   },
 ];
 
@@ -54,12 +63,13 @@ export function ReasonsSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
         >
           <h2 className="title text-white">Reasons to Choose Int+ for</h2>
           <p className="title text-muted-foreground">Your Technological Journey</p>
           <p className="mx-auto text-muted-foreground md:text-lg max-w-2xl xl:max-w-full">
-            At Int+, we combine technical expertise with a deep understanding of your business needs to deliver <br className="hidden xl:block" />
+            At Int+, we combine technical expertise with a deep understanding of your business needs
+            to deliver <br className="hidden xl:block" />
             software solutions that make a real difference. Here&apos;s why you should choose us:
           </p>
         </motion.div>
@@ -69,7 +79,7 @@ export function ReasonsSection() {
           className="mx-auto grid mt-16 md:grid-cols-2 lg:gap-y-10 lg:grid-cols-3 items-start relative"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2, }}
+          viewport={{ once: true, amount: 0.2 }}
           variants={{
             hidden: { opacity: 0 },
             visible: {
@@ -88,7 +98,7 @@ export function ReasonsSection() {
                 hidden: { opacity: 0 },
                 visible: { opacity: 1 },
               }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.8 }}
               className="h-[330px] border-b last:border-b-0 md:border-b-0 md:border-r md:[&:nth-child(3)]:border-r-0 md:[&:nth-child(5)]:border-r-0 lg:[&:nth-child(3)]:border-r lg:[&:nth-child(4)]:border-r-0 lg:[&:nth-child(5)]:border-r lg:[&:nth-child(7)]:border-0"
             >
               <div className="flex flex-col items-center space-y-4 justify-between p-6 text-center h-full">

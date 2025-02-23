@@ -1,13 +1,13 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { ChevronUp } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
-import Image from 'next/image'
-import { categories, Project } from '@/lib/projectData'
+import { useState } from 'react';
+import { ChevronUp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Separator } from '@/components/ui/separator';
+import Image from 'next/image';
+import { categories, Project } from '@/lib/projectData';
 
 export default function ProjectShowcaseCard({
   title,
@@ -18,21 +18,16 @@ export default function ProjectShowcaseCard({
   startDate,
   completionDate,
   methods,
-  technologies
+  technologies,
 }: Project) {
-  const [isExpanded, setIsExpanded] = useState(false)
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div className="min-h-screen container max-w-6xl border rounded-2xl px-4 py-4 md:p-8">
       {/* Hero Section with 3D Mockups */}
       <div className="relative h-[480px] mb-8 rounded-2xl overflow-hidden">
         <div className="absolute inset-0">
-          <Image
-            src={img}
-            alt="Project Preview"
-            fill
-            className="w-full h-full object-cover"
-          />
+          <Image src={img} alt="Project Preview" fill className="w-full h-full object-cover" />
         </div>
       </div>
 
@@ -41,18 +36,17 @@ export default function ProjectShowcaseCard({
         <CardContent className="p-0">
           <div className="flex gap-4 items-center md:items-start justify-between mb-6">
             <h1 className="text-lg md:text-2xl font-semibold">{title}</h1>
-            <div className='flex gap-2 items-center'>
-              <span className="hidden md:block">
-                show {" "}
-                {isExpanded ? 'less' : 'more'}
-              </span>
+            <div className="flex gap-2 items-center">
+              <span className="hidden md:block">show {isExpanded ? 'less' : 'more'}</span>
               <Button
                 variant="ghost"
                 size="icon"
                 className="bg-gradient-to-br from-white/20 via-background/80 to-background rounded-full border"
                 onClick={() => setIsExpanded(!isExpanded)}
               >
-                <ChevronUp className={`h-4 w-4 transition-all ease-in-out duration-300 ${isExpanded ? "rotate-180" : ""} `} />
+                <ChevronUp
+                  className={`h-4 w-4 transition-all ease-in-out duration-300 ${isExpanded ? 'rotate-180' : ''} `}
+                />
               </Button>
             </div>
           </div>
@@ -60,17 +54,19 @@ export default function ProjectShowcaseCard({
           {/* Categories */}
           <div className="flex flex-wrap gap-4 mb-8">
             {projectCategories.map((category, index) => {
-              const categoryInfo = categories.find(c => c.name === category)
-              const Icon = categoryInfo ? categoryInfo.icon : null
+              const categoryInfo = categories.find((c) => c.name === category);
+              const Icon = categoryInfo ? categoryInfo.icon : null;
               return (
-                <Badge key={index} className="flex items-center gap-2 text-sm text-muted-foreground border border-border md:py-2 md:px-4 rounded-full bg-background">
+                <Badge
+                  key={index}
+                  className="flex items-center gap-2 text-sm text-muted-foreground border border-border md:py-2 md:px-4 rounded-full bg-background"
+                >
                   {Icon && <Icon className="w-4 h-4" />}
                   {category}
                 </Badge>
-              )
+              );
             })}
           </div>
-
 
           <div className="border rounded-2xl p-4 md:p-8">
             {/* Project Description */}
@@ -79,10 +75,10 @@ export default function ProjectShowcaseCard({
               <p className="text-zinc-400">{description}</p>
             </div>
             <div
-              className={`overflow-hidden transition-all ease-in-out duration-300 ${isExpanded ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
-                }`}
+              className={`overflow-hidden transition-all ease-in-out duration-300 ${
+                isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+              }`}
             >
-
               {/* Project Metadata */}
               <div className="grid md:grid-cols-4 gap-6 my-8 border rounded-2xl p-4">
                 <div>
@@ -130,17 +126,15 @@ export default function ProjectShowcaseCard({
                       >
                         {method}
                       </Badge>
-                      <Separator orientation="vertical" className='hidden md:block' />
+                      <Separator orientation="vertical" className="hidden md:block" />
                     </div>
                   ))}
                 </div>
               </div>
             </div>
           </div>
-
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
-

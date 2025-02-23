@@ -1,29 +1,29 @@
-"use client"
+'use client';
 
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from 'lucide-react'
-import Image from "next/image"
-import { motion } from "framer-motion"
-import Link from "next/link"
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const projects = [
   {
-    image: "/project-1.svg",
-    title: "Innovative Digital Retail Platform",
-    category: "SaaS Web Development",
-    date: "January 2022",
+    image: '/project-1.svg',
+    title: 'Innovative Digital Retail Platform',
+    category: 'SaaS Web Development',
+    date: 'January 2022',
     description:
-      "We built a groundbreaking e-commerce platform for our client, that seamlessly changes the digital selling narrative worldwide. With an intuitive user interface and secure payment gateways, this project revolutionizes online shopping.",
+      'We built a groundbreaking e-commerce platform for our client, that seamlessly changes the digital selling narrative worldwide. With an intuitive user interface and secure payment gateways, this project revolutionizes online shopping.',
   },
   {
-    image: "/project-2.svg",
-    title: "Enhanced Logistics Solutions for Small and Medium DIspatch Businesses",
-    category: "SaaS Web Development",
-    date: "March 2022",
+    image: '/project-2.svg',
+    title: 'Enhanced Logistics Solutions for Small and Medium DIspatch Businesses',
+    category: 'SaaS Web Development',
+    date: 'March 2022',
     description:
-      "Our client came to us with an idea to disrupt dispatch/courier services with technology in Nigeria. With a map and secure payment gateway, building 4 intuitive user interface apps.",
+      'Our client came to us with an idea to disrupt dispatch/courier services with technology in Nigeria. With a map and secure payment gateway, building 4 intuitive user interface apps.',
   },
-]
+];
 
 export function WorksSection() {
   return (
@@ -34,15 +34,16 @@ export function WorksSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
         >
           <h2 className="title">
-            <span className="text-muted-foreground">Our</span>{" "}
+            <span className="text-muted-foreground">Our</span>{' '}
             <span className="text-white">Works</span>
           </h2>
           <p className="mx-auto max-w-[800px] text-muted-foreground">
-            Witness the brilliance of our previous projects. Our portfolio showcases the successful collaborations we&apos;ve had with
-            diverse clients across various industries. Let our work speak for itself.
+            Witness the brilliance of our previous projects. Our portfolio showcases the successful
+            collaborations we&apos;ve had with diverse clients across various industries. Let our
+            work speak for itself.
           </p>
         </motion.div>
 
@@ -66,13 +67,8 @@ export function WorksSection() {
                     className="opacity-15 rounded-[17px]"
                   />
                   <div className="absolute -bottom-5 w-full flex items-center justify-center">
-                    <Button
-                      variant="outline"
-                      size={"lg"}
-                      asChild
-                      className="mx-auto"
-                    >
-                      <Link href={index === 0 ? "projects/#project-1" : "projects/#project-2"}>
+                    <Button variant="outline" size={'lg'} asChild className="mx-auto">
+                      <Link href={index === 0 ? 'projects/#project-1' : 'projects/#project-2'}>
                         View Projects Details
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
@@ -81,7 +77,9 @@ export function WorksSection() {
                 </div>
                 <div className="mt-10 space-y-4">
                   <span className="h-[300px] w-full bg-red-400">
-                    <h3 className="text-lg md:text-xl font-bold text-white min-h-[70px]">{project.title}</h3>
+                    <h3 className="text-lg md:text-xl font-bold text-white min-h-[70px]">
+                      {project.title}
+                    </h3>
                   </span>
                   <div className="flex flex-col md:flex-row text-white md:items-center md:justify-between text-sm">
                     <p className="text-white">Category: {project.category}</p>
@@ -95,12 +93,8 @@ export function WorksSection() {
         </div>
 
         <div className="flex justify-center mt-12">
-          <Button
-            variant="outline"
-            size="lg"
-            asChild
-          >
-            <Link href='/projects/#showcase'>
+          <Button variant="outline" size="lg" asChild>
+            <Link href="/projects/#showcase">
               View All Projects
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
@@ -108,6 +102,5 @@ export function WorksSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

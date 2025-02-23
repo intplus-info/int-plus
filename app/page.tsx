@@ -1,10 +1,10 @@
-import CTABanner from "@/components/cta-banner"
-import FAQ from "@/components/faq"
-import { HeroSection } from "@/components/hero-section"
-import { ReasonsSection } from "@/components/reasons-section"
-import { ServicesSection } from "@/components/services-section"
-import Testimonials from "@/components/testimonials"
-import { WorksSection } from "@/components/works-section"
+import CTABanner from '@/components/cta-banner';
+import FAQ from '@/components/faq';
+import { HeroSection } from '@/components/hero-section';
+import { ReasonsSection } from '@/components/reasons-section';
+import { ServicesSection } from '@/components/services-section';
+import Testimonials from '@/components/testimonials';
+import { WorksSection } from '@/components/works-section';
 
 export default function Home() {
   return (
@@ -19,6 +19,5 @@ export default function Home() {
       <FAQ />
       <CTABanner />
     </main>
-  )
+  );
 }
-

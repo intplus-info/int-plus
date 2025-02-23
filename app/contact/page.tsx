@@ -1,34 +1,33 @@
-'use client'
+'use client';
 
-import ContactBanner from '@/components/ContactBanner'
-import { Button } from '@/components/ui/button'
-import { ArrowRight, Mail } from 'lucide-react'
-import Link from 'next/link'
-import React from 'react'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import InquiryForm from '@/components/inquiry-form'
-import ContactConfirmation from '@/components/contact-confirmation'
-import CTABanner from '@/components/cta-banner'
+import ContactBanner from '@/components/ContactBanner';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Mail } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import InquiryForm from '@/components/inquiry-form';
+import ContactConfirmation from '@/components/contact-confirmation';
+import CTABanner from '@/components/cta-banner';
 
 const locations = [
   {
     image: '/icons/nigeria.svg',
-    country: "Nigeria",
+    country: 'Nigeria',
     address: (
       <ul>
         <li>80 Sparklight Estate, Ojodu, Lagos.</li>
         <li>116 Adenike Wole- Ajibode, Lekki Phase One.</li>
       </ul>
-    )
+    ),
   },
   {
     image: '/icons/canada.svg',
-    country: "Canada",
-    address:
-      "20 Maud St #202 Toronto",
+    country: 'Canada',
+    address: '20 Maud St #202 Toronto',
   },
-]
+];
 
 const emailContacts = [
   {
@@ -43,7 +42,7 @@ const emailContacts = [
     title: 'For Job Opportunities',
     email: 'careers@intplus.co',
   },
-]
+];
 
 const phoneContacts = [
   {
@@ -58,12 +57,12 @@ const phoneContacts = [
     title: 'Free Consultation',
     phone: '+234 703 957 4358',
   },
-]
+];
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 },
-}
+};
 
 const Page = () => {
   return (
@@ -200,7 +199,7 @@ const Page = () => {
       </div>
       <CTABanner />
     </motion.div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

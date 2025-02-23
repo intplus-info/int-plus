@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Code2,
   Smartphone,
@@ -15,35 +15,34 @@ import {
   MonitorSmartphone,
   Binary,
   ArrowRight,
-} from "lucide-react";
-import { motion } from "framer-motion";
+} from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const services = [
   {
     icon: Code2,
-    title: "Web Design",
+    title: 'Web Design',
     description:
       "Our Web Design service is all about creating visually stunning and user-friendly websites that leave a lasting impression on your audience. We blend creativity with functionality to deliver websites that showcase your brand's identity while ensuring seamless navigation and optimal user experience.",
   },
   {
     icon: Smartphone,
-    title: "Enterprise Solution",
+    title: 'Enterprise Solution',
     description:
       "We build scalable, robust enterprise software solutions designed to evolve with your business. Let's craft a tailored solution from scratch or modernize existing systems that your customers will love and that will drive your company forward.",
   },
   {
     icon: Globe,
-    title: "Mobile App Development",
+    title: 'Mobile App Development',
     description:
-      "With our Mobile App Development service, we harness the power of mobile technology to create cutting-edge applications that engage your customers on-the-go. Our team Our team of skilled developers builds feature-rich and intuitive apps for both Android and iOS platforms.",
+      'With our Mobile App Development service, we harness the power of mobile technology to create cutting-edge applications that engage your customers on-the-go. Our team Our team of skilled developers builds feature-rich and intuitive apps for both Android and iOS platforms.',
   },
   {
     icon: Building2,
-    title: "Digital Transformation Services",
+    title: 'Digital Transformation Services',
     description:
-      "Int+ is your reliable digital transformation partner. Leverage our expertise in using digital technologies to create new or modify existing business processes to meet changing market requirements.",
+      'Int+ is your reliable digital transformation partner. Leverage our expertise in using digital technologies to create new or modify existing business processes to meet changing market requirements.',
   },
-
 ];
 
 const ServicesHero = () => {
@@ -56,15 +55,15 @@ const ServicesHero = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
           >
             <h2 className="title">
-              <span className="text-muted-foreground">Our</span>{" "}
+              <span className="text-muted-foreground">Our</span>{' '}
               <span className="text-white">Services</span>
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground">
-              We build scalable, robust solutions designed to evolve with your business. Let&apos;s craft software your customers will love
-              and drive your company forward.
+              We build scalable, robust solutions designed to evolve with your business. Let&apos;s
+              craft software your customers will love and drive your company forward.
             </p>
           </motion.div>
           <div className="mx-auto grid gap-x-4 xl:gap-x-8 gap-y-4 xl:gap-y-16 mt-16 xl:grid-cols-2 items-start">
@@ -107,7 +106,7 @@ const ServicesHero = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default ServicesHero
+export default ServicesHero;

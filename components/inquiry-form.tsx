@@ -1,68 +1,68 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import { useForm, Controller } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
+import { useState } from 'react';
+import { useForm, Controller } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
-import { ArrowRight } from "lucide-react"
-import { type InquiryFormData, inquiryFormSchema } from "@/schemas/inquiryFormSchema"
-import { useToast } from "@/hooks/use-toast"
-import emailjs from "@emailjs/browser"
+} from '@/components/ui/select';
+import { ArrowRight } from 'lucide-react';
+import { type InquiryFormData, inquiryFormSchema } from '@/schemas/inquiryFormSchema';
+import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 export default function InquiryForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const { toast } = useToast()
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const form = useForm<InquiryFormData>({
     resolver: zodResolver(inquiryFormSchema),
-  })
+  });
 
   const {
     register,
     handleSubmit,
     control,
     formState: { errors },
-  } = form
+  } = form;
 
   const onSubmit = handleSubmit(async (data: InquiryFormData) => {
-    console.log(data)
-    setIsSubmitting(true)
+    console.log(data);
+    setIsSubmitting(true);
 
     emailjs
       .sendForm(
-        "service_ejfteur", // EmailJS service ID
-        "template_070lelq", // Replace EmailJS template ID
-        "#my-form", // Form ID
-        "VkT4Jn2og1P0vOo7i" // EmailJS public key
+        'service_ejfteur', // EmailJS service ID
+        'template_070lelq', // Replace EmailJS template ID
+        '#my-form', // Form ID
+        'VkT4Jn2og1P0vOo7i' // EmailJS public key
       )
       .then((response) => {
         // console.log("Email sent successfully:", response)
         toast({
-          description: "Your message has been sent.",
-        })
-        form.reset()
-        setIsSubmitting(false)
+          description: 'Your message has been sent.',
+        });
+        form.reset();
+        setIsSubmitting(false);
       })
       .catch((error) => {
-        console.error("Error sending email:", error)
+        console.error('Error sending email:', error);
         toast({
-          variant: "destructive",
-          title: "Uh oh! Something went wrong.",
-          description: "Your message was not sent.",
-        })
-        setIsSubmitting(false)
-      })
-  })
+          variant: 'destructive',
+          title: 'Uh oh! Something went wrong.',
+          description: 'Your message was not sent.',
+        });
+        setIsSubmitting(false);
+      });
+  });
 
   return (
     <div id="inquiryForm" className="bg-background px-8 md:px-0 py-12 scroll-mt-14">
@@ -82,8 +82,8 @@ export default function InquiryForm() {
               <Input
                 id="name"
                 placeholder="Enter your Name"
-                {...register("name")}
-                className={errors.name ? "border-red-500" : ""}
+                {...register('name')}
+                className={errors.name ? 'border-red-500' : ''}
               />
               {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
             </div>
@@ -93,8 +93,8 @@ export default function InquiryForm() {
                 id="email"
                 type="email"
                 placeholder="Enter your Email"
-                {...register("email")}
-                className={errors.email ? "border-red-500" : ""}
+                {...register('email')}
+                className={errors.email ? 'border-red-500' : ''}
               />
               {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
             </div>
@@ -104,8 +104,8 @@ export default function InquiryForm() {
                 id="phone"
                 type="tel"
                 placeholder="Enter your Phone Number"
-                {...register("phone")}
-                className={errors.phone ? "border-red-500" : ""}
+                {...register('phone')}
+                className={errors.phone ? 'border-red-500' : ''}
               />
               {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
             </div>
@@ -121,7 +121,9 @@ export default function InquiryForm() {
                 render={({ field }) => (
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <SelectTrigger
-                      className={errors.service ? "border-red-500 rounded-full pl-4" : "pl-4 rounded-full"}
+                      className={
+                        errors.service ? 'border-red-500 rounded-full pl-4' : 'pl-4 rounded-full'
+                      }
                     >
                       <SelectValue placeholder="Select your Service" />
                     </SelectTrigger>
@@ -138,7 +140,7 @@ export default function InquiryForm() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="company">Company / Organization Name</Label>
-              <Input id="company" placeholder="Enter Name" {...register("company")} />
+              <Input id="company" placeholder="Enter Name" {...register('company')} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="subject">Subject</Label>
@@ -148,7 +150,9 @@ export default function InquiryForm() {
                 render={({ field }) => (
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <SelectTrigger
-                      className={errors.subject ? "border-red-500 rounded-full pl-4" : "pl-4 rounded-full"}
+                      className={
+                        errors.subject ? 'border-red-500 rounded-full pl-4' : 'pl-4 rounded-full'
+                      }
                     >
                       <SelectValue placeholder="Select your Subject" />
                     </SelectTrigger>
@@ -171,17 +175,17 @@ export default function InquiryForm() {
             <Textarea
               id="message"
               placeholder="Enter your Message"
-              {...register("message")}
-              className={`min-h-[150px] ${errors.message ? "border-red-500" : ""}`}
+              {...register('message')}
+              className={`min-h-[150px] ${errors.message ? 'border-red-500' : ''}`}
             />
             {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
           </div>
 
           {/* Submit Button */}
           <div className="flex justify-center">
-            <Button type="submit" disabled={isSubmitting} variant={"outline"} className="group">
+            <Button type="submit" disabled={isSubmitting} variant={'outline'} className="group">
               {isSubmitting ? (
-                "Sending..."
+                'Sending...'
               ) : (
                 <>
                   Send your Inquiry
@@ -193,5 +197,5 @@ export default function InquiryForm() {
         </form>
       </div>
     </div>
-  )
+  );
 }

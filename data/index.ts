@@ -58,9 +58,7 @@ export const footerData = {
     },
     {
       title: 'Blogs',
-      links: [
-        { title: 'Our Blogs', href: 'blog' },
-      ],
+      links: [{ title: 'Our Blogs', href: 'blog' }],
     },
   ],
   copyright: '©2023 Int+ · All Rights Reserved.',

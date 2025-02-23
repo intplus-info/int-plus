@@ -1,23 +1,63 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import useEmblaCarousel from "embla-carousel-react";
-import Link from "next/link";
-import { useEffect, useState } from "react"; // Import useState
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import useEmblaCarousel from 'embla-carousel-react';
+import Link from 'next/link';
+import { useEffect, useState } from 'react'; // Import useState
 
 export function HeroSection() {
   const industries = [
-    { image: "/cards/card-1.svg", invertedImage: "/cards/inverted-card-1.svg", name: "Fintech", url: "#" },
-    { image: "/cards/card-2.svg", invertedImage: "/cards/inverted-card-2.svg", name: "Construction", url: "#" },
-    { image: "/cards/card-3.svg", invertedImage: "/cards/inverted-card-3.svg", name: "Logistics & Transportation", url: "#" },
-    { image: "/cards/card-4.svg", invertedImage: "/cards/inverted-card-4.svg", name: "Travel & Hospitality", url: "#" },
-    { image: "/cards/card-5.svg", invertedImage: "/cards/inverted-card-5.svg", name: "Edtech", url: "#" },
-    { image: "/cards/card-6.svg", invertedImage: "/cards/inverted-card-6.svg", name: "Real Estate", url: "#" },
-    { image: "/cards/card-7.svg", invertedImage: "/cards/inverted-card-7.svg", name: "Digital Retail", url: "#" },
-    { image: "/cards/card-8.svg", invertedImage: "/cards/inverted-card-8.svg", name: "Oil and Gas", url: "#" },
+    {
+      image: '/cards/card-1.svg',
+      invertedImage: '/cards/inverted-card-1.svg',
+      name: 'Fintech',
+      url: '#',
+    },
+    {
+      image: '/cards/card-2.svg',
+      invertedImage: '/cards/inverted-card-2.svg',
+      name: 'Construction',
+      url: '#',
+    },
+    {
+      image: '/cards/card-3.svg',
+      invertedImage: '/cards/inverted-card-3.svg',
+      name: 'Logistics & Transportation',
+      url: '#',
+    },
+    {
+      image: '/cards/card-4.svg',
+      invertedImage: '/cards/inverted-card-4.svg',
+      name: 'Travel & Hospitality',
+      url: '#',
+    },
+    {
+      image: '/cards/card-5.svg',
+      invertedImage: '/cards/inverted-card-5.svg',
+      name: 'Edtech',
+      url: '#',
+    },
+    {
+      image: '/cards/card-6.svg',
+      invertedImage: '/cards/inverted-card-6.svg',
+      name: 'Real Estate',
+      url: '#',
+    },
+    {
+      image: '/cards/card-7.svg',
+      invertedImage: '/cards/inverted-card-7.svg',
+      name: 'Digital Retail',
+      url: '#',
+    },
+    {
+      image: '/cards/card-8.svg',
+      invertedImage: '/cards/inverted-card-8.svg',
+      name: 'Oil and Gas',
+      url: '#',
+    },
   ];
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -42,7 +82,7 @@ export function HeroSection() {
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
   };
 
   const staggerContainer = {
@@ -59,7 +99,7 @@ export function HeroSection() {
         className="bg-gradient-to-br from-background/50 via-background/30 to-background h-full w-full absolute top-0 left-0 z-0"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 1, ease: 'easeOut' }}
       />
       <div className="flex flex-col items-center text-center space-y-8 w-full pt-20 z-20">
         <motion.div
@@ -69,19 +109,24 @@ export function HeroSection() {
           variants={fadeIn}
         >
           <h1 className="text-[34px] md:text-5xl xl:text-6xl font-semibold leading-[44px] xl:tracking-tighter">
-            Software Solutions{" "}
-            <br className="xl:hidden" />
+            Software Solutions <br className="xl:hidden" />
             <span className="text-muted-foreground">For Your Business Growth</span>
           </h1>
           <p className="mx-auto text-muted-foreground pt-8 leading-[21px] max-w-[800px] xl:max-w-full xl:text-lg">
-            Your trusted partner for cutting-edge software solutions. Whether you&apos;re a startup looking to launch your MVP or an enterprise{" "}
-            <br className="hidden xl:block" />
-            seeking to optimize your operations, our team of expert developers, designers, and consultants guides you every step of the way.
+            Your trusted partner for cutting-edge software solutions. Whether you&apos;re a startup
+            looking to launch your MVP or an enterprise <br className="hidden xl:block" />
+            seeking to optimize your operations, our team of expert developers, designers, and
+            consultants guides you every step of the way.
           </p>
         </motion.div>
 
         {/* Mobile autoplay */}
-        <motion.div className="w-full" initial="hidden" animate="visible" variants={staggerContainer}>
+        <motion.div
+          className="w-full"
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer}
+        >
           <div className="xl:hidden relative">
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex">
@@ -100,7 +145,9 @@ export function HeroSection() {
                             />
                           </div>
                           <span className="flex items-center absolute bottom-7 h-10 w-full">
-                            <p className="text-sm mt-4 text-white/40 w-full bottom-10">{industry.name}</p>
+                            <p className="text-sm mt-4 text-white/40 w-full bottom-10">
+                              {industry.name}
+                            </p>
                           </span>
                         </CardContent>
                       </Card>
@@ -150,16 +197,12 @@ export function HeroSection() {
         >
           <motion.div variants={fadeIn}>
             <Button asChild size="lg" className="min-w-[200px] hover:bg-primary/90">
-              <Link href='/contact/#inquiryForm'>
-                Book Free Consultation
-              </Link>
+              <Link href="/contact/#inquiryForm">Book Free Consultation</Link>
             </Button>
           </motion.div>
           <motion.div variants={fadeIn}>
             <Button asChild variant="outline" size="lg" className="min-w-[200px]">
-              <Link href='/projects/#showcase'>
-                View Portfolio
-              </Link>
+              <Link href="/projects/#showcase">View Portfolio</Link>
             </Button>
           </motion.div>
         </motion.div>

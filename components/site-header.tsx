@@ -1,23 +1,23 @@
-'use client'
+'use client';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation"; // For getting the current path
-import { Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import Image from "next/image";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation'; // For getting the current path
+import { Menu } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import Image from 'next/image';
 
 export function SiteHeader() {
   const pathname = usePathname();
 
   // Links array for dynamic navigation
   const links = [
-    { href: "/", label: "Home" },
-    { href: "/services", label: "Services" },
-    { href: "/projects", label: "Projects" },
-    { href: "/about", label: "About Us" },
-    { href: "/contact", label: "Contact Us" },
-    // { href: "/careers", label: "Careers" },
+    { href: '/', label: 'Home' },
+    { href: '/services', label: 'Services' },
+    { href: '/projects', label: 'Projects' },
+    { href: '/about', label: 'About Us' },
+    { href: '/contact', label: 'Contact Us' },
+    { href: '/careers', label: 'Careers' },
     // { href: "/blogs", label: "Blog" },
     // { href: "/academy", label: "Academy" },
   ];
@@ -28,13 +28,7 @@ export function SiteHeader() {
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2 relative">
-            <Image
-              src="/icons/logo-color.svg"
-              alt="Logo"
-              width={60}
-              height={60}
-              className=""
-            />
+            <Image src="/icons/logo-color.svg" alt="Logo" width={60} height={60} className="" />
             <span className="absolute mx-auto py-4 flex border w-fit bg-gradient-to-r blur-xl from-foreground via-foreground to-foreground bg-clip-text text-[24px] box-content font-extrabold text-transparent text-center select-none">
               Int+
             </span>
@@ -50,10 +44,11 @@ export function SiteHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className={`relative text-sm font-normal transition-colors hover:text-primary whitespace-nowrap ${pathname === link.href
-                ? "bg-[#1A1A1A] border border-[#1F1F1F] rounded-full text-foreground" // Active styles
-                : "text-foreground"
-                }`}
+              className={`relative text-sm font-normal transition-colors hover:text-primary whitespace-nowrap ${
+                pathname === link.href
+                  ? 'bg-[#1A1A1A] border border-[#1F1F1F] rounded-full text-foreground' // Active styles
+                  : 'text-foreground'
+              }`}
             >
               <span className="absolute mx-auto py-2 px-4 flex border w-fit bg-gradient-to-r blur-md from-foreground via-foreground to-foreground bg-clip-text box-content text-white text-transparent text-center select-none">
                 {link.label}
@@ -80,10 +75,11 @@ export function SiteHeader() {
                   <Link
                     // key={link.href}
                     href={link.href}
-                    className={`text-sm font-medium transition-colors hover:text-primary ${pathname === link.href
-                      ? "bg-[#1A1A1A] px-4 py-2 border border-[#1F1F1F] rounded-full text-foreground" // Active styles
-                      : "text-foreground"
-                      }`}
+                    className={`text-sm font-medium transition-colors hover:text-primary ${
+                      pathname === link.href
+                        ? 'bg-[#1A1A1A] px-4 py-2 border border-[#1F1F1F] rounded-full text-foreground' // Active styles
+                        : 'text-foreground'
+                    }`}
                   >
                     {link.label}
                   </Link>

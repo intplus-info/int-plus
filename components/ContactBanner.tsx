@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
-import React from 'react'
-import { Button } from './ui/button'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { Button } from './ui/button';
+import { motion } from 'framer-motion';
 
 const ContactBanner = () => {
   return (
@@ -25,8 +25,7 @@ const ContactBanner = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.9, delay: 0.5, ease: 'easeOut' }}
           >
-            <span className="text-muted-foreground">Get</span>{" "}
-            in Touch with Us Today!
+            <span className="text-muted-foreground">Get</span> in Touch with Us Today!
           </motion.h2>
 
           <motion.p
@@ -35,12 +34,11 @@ const ContactBanner = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1.4, delay: 0.6 }}
           >
-            At Int+, we value your inquiries, feedback, and collaborations.
-            Whether you are interested in our digital services, have questions
-            about our projects, or want to explore potential partnerships, we
-            encourage you to reach out to our dedicated team. Connect with us
-            through any of the channels below, and we&apos;ll be delighted to
-            assist you on your digital journey.
+            At Int+, we value your inquiries, feedback, and collaborations. Whether you are
+            interested in our digital services, have questions about our projects, or want to
+            explore potential partnerships, we encourage you to reach out to our dedicated team.
+            Connect with us through any of the channels below, and we&apos;ll be delighted to assist
+            you on your digital journey.
           </motion.p>
 
           <motion.div
@@ -57,18 +55,14 @@ const ContactBanner = () => {
             >
               Feel free to contact us through any of the following channels
             </Button>
-            <Button
-              variant={'outline'}
-              className="w-fit xl:hidden md:mb-20"
-              size="lg"
-            >
+            <Button variant={'outline'} className="w-fit xl:hidden md:mb-20" size="lg">
               Contact us through here
             </Button>
           </motion.div>
         </div>
       </motion.div>
     </motion.section>
-  )
-}
+  );
+};
 
-export default ContactBanner
+export default ContactBanner;

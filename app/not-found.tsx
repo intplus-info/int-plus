@@ -1,9 +1,9 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <div className='flex flex-col items-center justify-center h-screen'>
-      <div className='mb-0'>
+    <div className="flex flex-col items-center justify-center h-screen">
+      <div className="mb-0">
         <span className="absolute mx-auto py-4 flex border w-fit bg-gradient-to-r blur-xl from-foreground via-foreground to-foreground bg-clip-text text-[64px] box-content font-extrabold text-transparent text-center select-none">
           Coming Soon!
         </span>
@@ -11,7 +11,7 @@ export default function NotFound() {
           Coming Soon!
         </h1>
       </div>
-      <Link href="/" className=''>
+      <Link href="/" className="">
         <span className="absolute mx-auto py-4 flex border w-fit bg-gradient-to-r blur-xl from-foreground via-foreground to-foreground bg-clip-text text-[24px] box-content font-extrabold text-transparent text-center select-none">
           Return Home
         </span>
@@ -20,5 +20,5 @@ export default function NotFound() {
         </h1>
       </Link>
     </div>
-  )
+  );
 }
