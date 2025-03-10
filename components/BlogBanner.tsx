@@ -1,6 +1,6 @@
-'use client';
+& apos;use client & apos;;
 
-import React from 'react';
+import React from & apos;react';
 import { Button } from './ui/button';
 import { motion } from 'framer-motion';
 import { Input } from './ui/input';
@@ -37,7 +37,7 @@ const BlogBanner = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1.4, delay: 0.6 }}
             >
-              let's embark on this exciting digital adventure together! Don't forget to share our
+              let&apos;s embark on this exciting digital adventure together! Don&apos;t forget to share our
               blog with your network to spread the knowledge and stay connected with the
               ever-evolving world of technology and innovation. Happy reading!
             </motion.p>

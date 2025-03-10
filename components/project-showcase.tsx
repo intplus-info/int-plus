@@ -25,7 +25,7 @@ const ProjectShowcase: React.FC<ProjectsProp> = ({ projects }) => {
         </h2>
         <p className="text-muted-foreground max-w-3xl mx-auto">
           Witness the brilliance of our previous projects. Our portfolio showcases the successful
-          collaborations we've had with diverse clients across various industries. Let our work
+          collaborations we&apos;ve had with diverse clients across various industries. Let our work
           speak for itself.
         </p>
       </motion.div>
