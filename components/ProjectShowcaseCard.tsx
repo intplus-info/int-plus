@@ -27,7 +27,7 @@ export default function ProjectShowcaseCard({
       {/* Hero Section with 3D Mockups */}
       <div className="relative h-[480px] mb-8 rounded-2xl overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={img.asset} alt="Project Preview" fill className="w-full h-full object-cover" />
+          <Image src='/images/project-001.png' alt="Project Preview" fill className="w-full h-full object-cover" />
         </div>
       </div>
 
