@@ -27,7 +27,7 @@ export default function ProjectShowcaseCard({
       {/* Hero Section with 3D Mockups */}
       <div className="relative h-[480px] mb-8 rounded-2xl overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={img} alt="Project Preview" fill className="w-full h-full object-cover" />
+          <Image src={img.asset} alt="Project Preview" fill className="w-full h-full object-cover" />
         </div>
       </div>
 
@@ -75,9 +75,8 @@ export default function ProjectShowcaseCard({
               <p className="text-zinc-400">{description}</p>
             </div>
             <div
-              className={`overflow-hidden transition-all ease-in-out duration-300 ${
-                isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
-              }`}
+              className={`overflow-hidden transition-all ease-in-out duration-300 ${isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                }`}
             >
               {/* Project Metadata */}
               <div className="grid md:grid-cols-4 gap-6 my-8 border rounded-2xl p-4">

@@ -321,3 +321,105 @@ export type AllSanitySchemaTypes =
   | SanityAssetSourceData
   | SanityImageMetadata;
 export declare const internalGroqTypeReferenceTo: unique symbol;
+// Source: ./sanity/lib/query.ts
+// Variable: JOB_LISTING_QUERY
+// Query: *[_type == "jobListing"] {  _id,  title,  slug,  location,  salary,  experience,  skills,  description,  responsibilities,  applicationDeadline,  categories,  applicationLink}
+export type JOB_LISTING_QUERYResult = Array<{
+  _id: string;
+  title: string | null;
+  slug: Slug | null;
+  location: string | null;
+  salary: string | null;
+  experience: string | null;
+  skills: string | null;
+  description: string | null;
+  responsibilities: Array<string> | null;
+  applicationDeadline: string | null;
+  categories: 'contract' | 'full-time' | 'internship' | 'part-time' | 'remote' | null;
+  applicationLink: string | null;
+}>;
+// Variable: POST_QUERY
+// Query: *[_type == "post"] {  _id,  title,  slug { current },  author-> { _id, name, image },  mainImage { asset-> { url }, alt },  categories[]-> { _id, title },  publishedAt,  body}
+export type POST_QUERYResult = Array<{
+  _id: string;
+  title: string | null;
+  slug: {
+    current: string | null;
+  } | null;
+  author: {
+    _id: string;
+    name: string | null;
+    image: {
+      asset?: {
+        _ref: string;
+        _type: 'reference';
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
+      };
+      hotspot?: SanityImageHotspot;
+      crop?: SanityImageCrop;
+      _type: 'image';
+    } | null;
+  } | null;
+  mainImage: {
+    asset: {
+      url: string | null;
+    } | null;
+    alt: string | null;
+  } | null;
+  categories: Array<{
+    _id: string;
+    title: string | null;
+  }> | null;
+  publishedAt: string | null;
+  body: Array<
+    | {
+        children?: Array<{
+          marks?: Array<string>;
+          text?: string;
+          _type: 'span';
+          _key: string;
+        }>;
+        style?: 'blockquote' | 'h1' | 'h2' | 'h3' | 'h4' | 'normal';
+        listItem?: 'bullet';
+        markDefs?: Array<{
+          href?: string;
+          _type: 'link';
+          _key: string;
+        }>;
+        level?: number;
+        _type: 'block';
+        _key: string;
+      }
+    | {
+        asset?: {
+          _ref: string;
+          _type: 'reference';
+          _weak?: boolean;
+          [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
+        };
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        alt?: string;
+        _type: 'image';
+        _key: string;
+      }
+  > | null;
+}>;
+// Variable: PROJECT_SHOWCASE_QUERY
+// Query: *[_type == "project"] {  _id,  title,  img {    asset-> {      url    },    alt  },  categories,  description,  timeTaken,  startDate,  completionDate,  methods,  technologies}
+export type PROJECT_SHOWCASE_QUERYResult = Array<never>;
+// Variable: UPCOMING_PROJECTS_QUERY
+// Query: *[_type == "upcomingProject"] {  _id,  icon,  title,  category,  completion,  description}
+export type UPCOMING_PROJECTS_QUERYResult = Array<never>;
+
+// Query TypeMap
+import '@sanity/client';
+declare module '@sanity/client' {
+  interface SanityQueries {
+    '*[_type == "jobListing"] {\n  _id,\n  title,\n  slug,\n  location,\n  salary,\n  experience,\n  skills,\n  description,\n  responsibilities,\n  applicationDeadline,\n  categories,\n  applicationLink\n}': JOB_LISTING_QUERYResult;
+    '*[_type == "post"] {\n  _id,\n  title,\n  slug { current },\n  author-> { _id, name, image },\n  mainImage { asset-> { url }, alt },\n  categories[]-> { _id, title },\n  publishedAt,\n  body\n}': POST_QUERYResult;
+    '*[_type == "project"] {\n  _id,\n  title,\n  img {\n    asset-> {\n      url\n    },\n    alt\n  },\n  categories,\n  description,\n  timeTaken,\n  startDate,\n  completionDate,\n  methods,\n  technologies\n}': PROJECT_SHOWCASE_QUERYResult;
+    '*[_type == "upcomingProject"] {\n  _id,\n  icon,\n  title,\n  category,\n  completion,\n  description\n}': UPCOMING_PROJECTS_QUERYResult;
+  }
+}

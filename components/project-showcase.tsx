@@ -3,9 +3,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectShowcaseCard from './ProjectShowcaseCard';
-import { projects } from '@/lib/projectData';
+import { ProjectsProp } from '@/lib/projectData';
 
-const ProjectShowcase = () => {
+const ProjectShowcase: React.FC<ProjectsProp> = ({ projects }) => {
+
+  console.log(projects);
+
+
   return (
     <section id="showcase" className="bg-background py-20 px-4 scroll-mt-10">
       <motion.div
@@ -21,7 +25,7 @@ const ProjectShowcase = () => {
         </h2>
         <p className="text-muted-foreground max-w-3xl mx-auto">
           Witness the brilliance of our previous projects. Our portfolio showcases the successful
-          collaborations we&apos;ve had with diverse clients across various industries. Let our work
+          collaborations we've had with diverse clients across various industries. Let our work
           speak for itself.
         </p>
       </motion.div>

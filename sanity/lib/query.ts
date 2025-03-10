@@ -55,3 +55,64 @@ export const POST_SLUGS_QUERY = `
     }
   }
 `
+
+
+
+export const PROJECT_SHOWCASE_QUERY = defineQuery(`*[_type == "project"] {
+  _id,
+  title,
+  img {
+    asset-> {
+      url
+    },
+    alt
+  },
+  categories,
+  description,
+  timeTaken,
+  startDate,
+  completionDate,
+  methods,
+  technologies
+}`)
+
+export const UPCOMING_PROJECTS_QUERY = defineQuery(`*[_type == "upcomingProject"] {
+  _id,
+  icon,
+  title,
+  category,
+  completion,
+  description
+}`)
+
+// For generating static paths for project pages if needed
+export const PROJECT_SLUGS_QUERY = `
+  *[_type == "project"] {
+    slug {
+      current
+    }
+  }
+`
+
+// For fetching a single project by slug
+export const PROJECT_SLUG_QUERY = `
+  *[_type == "project" && slug.current == $slug][0] {
+    _id,
+    title,
+    img {
+      asset-> {
+        url
+      },
+      alt
+    },
+    categories,
+    description,
+    timeTaken,
+    startDate,
+    completionDate,
+    methods,
+    technologies,
+    slug
+  }
+`
+

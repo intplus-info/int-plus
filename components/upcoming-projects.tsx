@@ -1,3 +1,6 @@
+'use client'
+
+
 import { CircleDot, Boxes, GraduationCap, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -72,11 +75,10 @@ export default function UpcomingProjects() {
             <div
               key={index}
               className={`rounded-2xl p-6  transition-colors border
-                  ${
-                    index === 1 || index === 3
-                      ? 'bg-gradient-to-bl from-gray-800/20 via-background to-background'
-                      : 'bg-gradient-to-br from-gray-800/20 via-background to-background'
-                  }
+                  ${index === 1 || index === 3
+                  ? 'bg-gradient-to-bl from-gray-800/20 via-background to-background'
+                  : 'bg-gradient-to-br from-gray-800/20 via-background to-background'
+                }
                  `}
             >
               <div className="flex items-center gap-3 mb-6">

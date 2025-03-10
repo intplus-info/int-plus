@@ -48,9 +48,6 @@ interface BlogContainerProps {
 export default function BlogContainer({ posts }: BlogContainerProps) {
   const [selectedCategory, setSelectedCategory] = useState("All")
 
-  console.log(posts);
-
-
   // Get featured post (first post)
   const featuredPost = posts?.[0]
 

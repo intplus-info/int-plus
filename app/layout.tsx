@@ -6,6 +6,7 @@ import './globals.css';
 import Footer from '@/components/footer';
 import { footerData } from '@/data';
 import { Toaster } from '@/components/ui/toaster';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer {...footerData} />
         <Toaster />
       </body>
+      <GoogleAnalytics gaId="G-G3FFDVQ9C9" />
     </html>
   );
 }
