@@ -1,6 +1,5 @@
-& apos;use client & apos;;
+'use client'
 
-import React from & apos;react';
 import { Button } from './ui/button';
 import { motion } from 'framer-motion';
 import { Input } from './ui/input';
