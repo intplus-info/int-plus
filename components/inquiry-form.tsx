@@ -35,7 +35,7 @@ export default function InquiryForm() {
   } = form;
 
   const onSubmit = handleSubmit(async (data: InquiryFormData) => {
-    console.log(data);
+    // console.log(data);
     setIsSubmitting(true);
 
     emailjs
@@ -113,7 +113,7 @@ export default function InquiryForm() {
 
           {/* Second Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="space-y-2">
+            {/* <div className="space-y-2">
               <Label htmlFor="service">Select Service</Label>
               <Controller
                 name="service"
@@ -137,7 +137,7 @@ export default function InquiryForm() {
                 )}
               />
               {errors.service && <p className="text-red-500 text-sm">{errors.service.message}</p>}
-            </div>
+            </div> */}
             <div className="space-y-2">
               <Label htmlFor="company">Company / Organization Name</Label>
               <Input id="company" placeholder="Enter Name" {...register('company')} />
