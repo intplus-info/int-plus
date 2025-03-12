@@ -2,14 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FolderX } from 'lucide-react';
 import ProjectShowcaseCard from './ProjectShowcaseCard';
 import { ProjectsProp } from '@/lib/projectData';
 
 const ProjectShowcase: React.FC<ProjectsProp> = ({ projects }) => {
-
-  console.log(projects);
-
-
   return (
     <section id="showcase" className="bg-background py-20 px-4 scroll-mt-10">
       <motion.div
@@ -30,13 +27,28 @@ const ProjectShowcase: React.FC<ProjectsProp> = ({ projects }) => {
         </p>
       </motion.div>
 
-      <div className="flex flex-col gap-10">
-        {projects.map((project, index) => (
-          <div key={index} id={index === 0 ? 'project-1' : 'project-2'} className="">
-            <ProjectShowcaseCard {...project} />
-          </div>
-        ))}
-      </div>
+      {projects.length > 0 ? (
+        <div className="flex flex-col gap-10">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              id={`project-${index + 1}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, ease: 'easeOut', delay: index * 0.1 }}
+            >
+              <ProjectShowcaseCard {...project} />
+            </motion.div>
+          ))}
+        </div>
+      ) : (
+        <div className="flex flex-col items-center justify-center text-center py-16 text-muted-foreground">
+          <FolderX className="w-16 h-16 mb-4" />
+          <p className="text-lg font-semibold">No projects available</p>
+          <p className="text-sm">Check back later for our latest work.</p>
+        </div>
+      )}
     </section>
   );
 };
