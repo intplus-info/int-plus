@@ -32,7 +32,9 @@ export const categories: Category[] = [
 export interface Project {
   title: string;
   img: {
-    asset: object; // You might want to replace this with a more specific type if available
+    asset: {
+      url: string;
+    };
     alt: string;
   };
   description: string;
