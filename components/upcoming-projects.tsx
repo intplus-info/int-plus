@@ -1,53 +1,21 @@
 'use client'
 
-
-import { CircleDot, Boxes, GraduationCap, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+import * as LucideIcons from 'lucide-react'; // Import all Lucide icons
 
-interface Project {
-  icon: React.ReactNode;
+interface UpcomingProjects {
+  icon: string; // Now icon is a string name (e.g., "Code", "Rocket")
   title: string;
   category: string;
   completion: string;
   description: string;
 }
 
-const projects: Project[] = [
-  {
-    icon: <CircleDot className="w-6 h-6" />,
-    title: 'Healthcare Platform Enhancement',
-    category: 'Health',
-    completion: 'Q3 2023',
-    description:
-      "Our team is collaborating with a leading healthcare provider to enhance their existing platform. The project aims to bring user-centric design solutions while ensuring compliance with industry standards. Our work involves detailed study along with innovative platform level modifications to ensure the platform's capabilities and revolutionize healthcare accessibility for users.",
-  },
-  {
-    icon: <Boxes className="w-6 h-6" />,
-    title: 'AI-Driven Marketing Automation',
-    category: 'Digital Marketing',
-    completion: 'Q1 2024',
-    description:
-      "We're partnering with a dynamic marketing agency to develop an AI-driven marketing automation platform. This innovative solution will help businesses streamline their marketing efforts through intelligent automation, campaign monitoring, and automated campaign management. The project promises to revolutionize the digital marketing landscape and drive unprecedented results in marketing ROI.",
-  },
-  {
-    icon: <GraduationCap className="w-6 h-6" />,
-    title: 'Educational Learning App',
-    category: 'Education',
-    completion: 'Q4 2024',
-    description:
-      'We are collaborating with an eco-conscious startup to create an innovative e-commerce platform that promotes sustainable products and environmentally friendly practices. The platform will incorporate features to raise awareness about eco-conscious choices while supporting sustainable businesses. This project aligns with our commitment to developing solutions that will shape the future.',
-  },
-  {
-    icon: <Users className="w-6 h-6" />,
-    title: 'Community Engagement Portal',
-    category: 'Web Development',
-    completion: 'Q4 2024',
-    description:
-      'Our team is excited to be part of a community-driven initiative to develop an engagement portal that connects residents with local services, events, and resources. The platform will foster community interaction, enhance civic relationship, and improve the quality of life for residents. This project demonstrates our dedication to using technology for positive social impact.',
-  },
-];
+interface UpcomingProjectsProp {
+  upcomingProjects: UpcomingProjects[];
+}
 
-export default function UpcomingProjects() {
+const UpcomingProjects: React.FC<UpcomingProjectsProp> = ({ upcomingProjects }) => {
   return (
     <div className="min-h-screen bg-background text-white p-6 md:p-12 md:pb-40">
       <div className="max-w-7xl mx-auto">
@@ -71,31 +39,46 @@ export default function UpcomingProjects() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 max-w-[1000px] mx-auto">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className={`rounded-2xl p-6  transition-colors border
-                  ${index === 1 || index === 3
-                  ? 'bg-gradient-to-bl from-gray-800/20 via-background to-background'
-                  : 'bg-gradient-to-br from-gray-800/20 via-background to-background'
-                }
-                 `}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="bg-zinc-800 p-2 rounded-full">{project.icon}</div>
-                <h3 className="text-lg font-medium">{project.title}</h3>
-              </div>
+          {upcomingProjects.map((project, index) => {
+            // Get the correct Lucide icon
+            const IconComponent = (LucideIcons as any)[project.icon] || LucideIcons.HelpCircle;
 
-              <div className=" grid grid-cols-2 text-sm text-muted-foreground border border-muted-foreground/20 rounded-2xl mb-4 p-2">
-                <div className="p-4  border-muted-foreground/20">
-                  <div className="mb-1">Category</div>
-                  <div className="text-white">{project.category}</div>
+            return (
+              <div
+                key={index}
+                className={`rounded-2xl p-6 transition-colors border 
+                  ${index % 2 === 0
+                    ? 'bg-gradient-to-br from-gray-800/20 via-background to-background'
+                    : 'bg-gradient-to-bl from-gray-800/20 via-background to-background'
+                  }`}
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  {/* Dynamically render the Lucide icon */}
+                  <div className="flex items-center justify-center bg-zinc-800 p-3 rounded-full w-12 h-12">
+                    <IconComponent className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-medium">{project.title}</h3>
                 </div>
+
+                <div className="grid grid-cols-2 text-sm text-muted-foreground border border-muted-foreground/20 rounded-2xl mb-4 p-2">
+                  <div className="p-4 border-muted-foreground/20">
+                    <div className="mb-1 font-semibold">Category</div>
+                    <div className="text-white">{project.category}</div>
+                  </div>
+                  {/* <div className="p-4 border-muted-foreground/20">
+                    <div className="mb-1 font-semibold">Completion</div>
+                    <div className="text-white">{project.completion}</div>
+                  </div> */}
+                </div>
+
+                {/* <p className="text-sm text-muted-foreground">{project.description}</p> */}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
   );
 }
+
+export default UpcomingProjects;

@@ -115,4 +115,3 @@ export const PROJECT_SLUG_QUERY = `
     slug
   }
 `
-
