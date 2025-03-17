@@ -28,7 +28,6 @@ export default async function PostPage({ params }: PostPageProps) {
     params: { slug: params.slug },
   })
 
-  console.log(postItems);
 
 
 

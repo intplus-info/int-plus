@@ -35,7 +35,6 @@ export default function InquiryForm() {
   } = form;
 
   const onSubmit = handleSubmit(async (data: InquiryFormData) => {
-    // console.log(data);
     setIsSubmitting(true);
 
     emailjs
@@ -46,7 +45,6 @@ export default function InquiryForm() {
         'VkT4Jn2og1P0vOo7i' // EmailJS public key
       )
       .then((response) => {
-        // console.log("Email sent successfully:", response)
         toast({
           description: 'Your message has been sent.',
         });

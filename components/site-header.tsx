@@ -17,8 +17,8 @@ export function SiteHeader() {
     { href: '/projects', label: 'Projects' },
     { href: '/about', label: 'About Us' },
     { href: '/contact', label: 'Contact Us' },
-    // { href: '/careers', label: 'Careers' },
-    // { href: '/blog', label: 'Blog' },
+    { href: '/careers', label: 'Careers' },
+    { href: '/blog', label: 'Blog' },
     // { href: "/academy", label: "Academy" },
   ];
 
@@ -45,8 +45,8 @@ export function SiteHeader() {
               key={link.href}
               href={link.href}
               className={`relative text-sm font-normal transition-colors hover:text-primary whitespace-nowrap ${pathname === link.href
-                  ? 'bg-[#1A1A1A] border border-[#1F1F1F] rounded-full text-foreground' // Active styles
-                  : 'text-foreground'
+                ? 'bg-[#1A1A1A] border border-[#1F1F1F] rounded-full text-foreground' // Active styles
+                : 'text-foreground'
                 }`}
             >
               <span className="absolute mx-auto py-2 px-4 flex border w-fit bg-gradient-to-r blur-md from-foreground via-foreground to-foreground bg-clip-text box-content text-white text-transparent text-center select-none">
@@ -75,8 +75,8 @@ export function SiteHeader() {
                     // key={link.href}
                     href={link.href}
                     className={`text-sm font-medium transition-colors hover:text-primary ${pathname === link.href
-                        ? 'bg-[#1A1A1A] px-4 py-2 border border-[#1F1F1F] rounded-full text-foreground' // Active styles
-                        : 'text-foreground'
+                      ? 'bg-[#1A1A1A] px-4 py-2 border border-[#1F1F1F] rounded-full text-foreground' // Active styles
+                      : 'text-foreground'
                       }`}
                   >
                     {link.label}

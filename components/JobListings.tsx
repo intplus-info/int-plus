@@ -19,8 +19,6 @@ export default function JobListings({ jobListing }: JobListingProps) {
     setExpandedJob(expandedJob === jobId ? null : jobId)
   }
 
-  console.log(jobListing)
-
   return (
     <div className="min-h-screen bg-background py-16 md:py-24 container">
       {!jobListing?.length ? (
